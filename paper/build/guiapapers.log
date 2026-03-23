@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  19 MAR 2026 11:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  23 MAR 2026 17:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1070,10 +1070,10 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 34.
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.aux
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 28.
+(babel)             Reported on input line 12.
 )
 \openout1 = `guiapapers.aux'.
 
@@ -1225,100 +1225,48 @@ Package biblatex Info: ... file 'guiapapers.bbl' found.
  (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.bbl)
 Package biblatex Info: Reference section=0 on input line 34.
 Package biblatex Info: Reference segment=0 on input line 34.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 80.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+trsy on input line 80.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/trsym\utrsy.fd
-File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
-)
-<./fig/circuito_1.pdf, id=71, 182.43758pt x 125.37439pt>
-File: ./fig/circuito_1.pdf Graphic file (type pdf)
-<use ./fig/circuito_1.pdf>
-Package pdftex.def Info: ./fig/circuito_1.pdf  used on input line 91.
-(pdftex.def)             Requested size: 180.67499pt x 124.17267pt.
-<./fig/circuito_2.pdf, id=72, 181.44086pt x 125.37439pt>
-File: ./fig/circuito_2.pdf Graphic file (type pdf)
-<use ./fig/circuito_2.pdf>
-Package pdftex.def Info: ./fig/circuito_2.pdf  used on input line 98.
-(pdftex.def)             Requested size: 180.67499pt x 124.84605pt.
-<./fig/plot4.png, id=75, 536.75531pt x 335.00156pt>
-File: ./fig/plot4.png Graphic file (type png)
-<use ./fig/plot4.png>
-Package pdftex.def Info: ./fig/plot4.png  used on input line 113.
-(pdftex.def)             Requested size: 267.39877pt x 166.88695pt.
-
-Overfull \hbox (23.15678pt too wide) in paragraph at lines 113--114
- [][] 
- []
-
-File: ./fig/plot4.png Graphic file (type png)
-<use ./fig/plot4.png>
-Package pdftex.def Info: ./fig/plot4.png  used on input line 120.
-(pdftex.def)             Requested size: 267.39877pt x 166.88695pt.
-
-Overfull \hbox (23.15678pt too wide) in paragraph at lines 120--121
- [][] 
- []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
-
- []
-
-[1{C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+LaTeX Warning: Empty bibliography on input line 128.
 
 
- <./fig/circuito_1.pdf> <./fig/circuito_2.pdf> <./fig/plot4.png (PNG copy)>]
-<./fig/circuito_3.pdf, id=152, 213.16338pt x 156.70946pt>
-File: ./fig/circuito_3.pdf Graphic file (type pdf)
-<use ./fig/circuito_3.pdf>
-Package pdftex.def Info: ./fig/circuito_3.pdf  used on input line 167.
-(pdftex.def)             Requested size: 216.81pt x 159.39436pt.
-
-Underfull \hbox (badness 1448) in paragraph at lines 201--203
+Underfull \hbox (badness 1448) in paragraph at lines 131--133
 \T1/phv/b/n/8 Juan P. Eli-zon-do \T1/phv/m/n/8 Reali-zó sus es-tu-dios de se-cun-da-ria en el
  []
 
 \tf@thm=\write6
 \openout6 = `guiapapers.thm'.
 
-[2 <./fig/circuito_3.pdf>] (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.aux
-LaTeX Info: Redefining \sptext on input line 28.
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+[1{C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+
+
+] (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.aux
+LaTeX Info: Redefining \sptext on input line 12.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
 )
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `guiapapers.out' has not changed.
-(rerunfilecheck)             Checksum: 837ABFA6CD92C5972D53F85EAAFE91BF;2826.
+(rerunfilecheck)             Checksum: 6A4B451C745706EF3CA3CC22D96DDD98;2291.
 Package logreq Info: Writing requests to 'guiapapers.run.xml'.
 \openout1 = `guiapapers.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37423 strings out of 467867
- 755288 string characters out of 5418334
- 1540564 words of memory out of 5000000
- 65739 multiletter control sequences out of 15000+600000
- 759056 words of font info for 165 fonts, out of 8000000 for 9000
+ 37014 strings out of 467867
+ 746385 string characters out of 5418334
+ 1533442 words of memory out of 5000000
+ 65375 multiletter control sequences out of 15000+600000
+ 753806 words of font info for 144 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 99i,12n,108p,1250b,1830s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.pdf (2 pages, 162500 bytes).
+ 99i,6n,108p,1250b,1826s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.pdf (1 page, 53247 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

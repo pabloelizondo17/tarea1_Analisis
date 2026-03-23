@@ -39,7 +39,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Tarea 1: Prensa Hidráulica de Presición}
+\title{Tarea 1: Prensa Hidráulica de Precisión}
 
 
 \author{Matías~A.~Camacho,~\IEEEmembership{Estudiante,~TEC}
@@ -63,7 +63,7 @@ El resumen no debe de exceder de 150 palabras y debe establecer lo que fue hecho
 
 % Se sugiere no más de cuatro palabras o frases cortas en orden alfabético, separadas por comas, que representen su reporte
 \begin{IEEEkeywords}
-Diodo, tensión, corriente, junta, ruptura.
+Modelado, estados, Laplace, corriente, presión.
 \end{IEEEkeywords}
 
 
@@ -76,101 +76,37 @@ Diodo, tensión, corriente, junta, ruptura.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Curva Característica del Diodo}
-El texto va aquí. La ecuación de la ley de Ohm es $V=I\cdot R$.
+\section{Descripción dinámica}
+
+...
+
+\subsection{Circuito de control}
+
+\subsection{Solenoide}
+
+\subsection{Sistema hidráulico}
+...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Diagramas de bloques}
 
 
-\subsection{Circuitos de Medición}
-
-El circuito de la Fig. \ref{fig:poldiodo} se utiliza para obtener una curva característica de un diodo utilizando una fuente de tensión CD y un multímetro. 
-
-\begin{figure}[!ht]
-\centering
-\begin{subfigure}[c]{0.4\textwidth}
-	\centering
-	\includegraphics[width=2.5in]{circuito_1}
-	\caption{Directa}
-	\label{fig:directa}	
-\end{subfigure}
-\hfill
-\begin{subfigure}[c]{0.4\textwidth}
-	\centering
-	\includegraphics[width=2.5in]{circuito_2}
-	\caption{Inversa}
-	\label{fig:reversa}	
-\end{subfigure}
-\caption{Polarización del diodo}
-\label{fig:poldiodo}
-\end{figure}
-
-\subsection{Simulaciones}
-\subsection{Resultados Experimentales}
-
-La gráfica de la Fig. \ref{fig:plot3} muestra una mala relación de tamaño para este formato de artículo, sin embargo, la que se muestra en la Fig. \ref{fig:plot4} se observan mejor los detalles de nombres de ejes y mayor resolución.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=3.7in]{plot4}
-\caption{Tensión de entrada $v_s(t)$ y salida $v_c(t)$ de un filtro RC (versión 1)}
-\label{fig:plot3}
-\end{figure}
-
-\begin{figure}[!ht] 
-\centering
-\includegraphics[width=3.7in]{plot4}
-\caption{Tensión de entrada $v_s(t)$ y salida $v_c(t)$ de un filtro RC (versión 2)}
-\label{fig:plot4}
-\end{figure}
-
-En la Tabla \ref{tabla1} se muestran los valores de resistencias utilizadas para realizar las mediciones del circuito de la Fig. \ref{fig:poldiodo}.
-
-\begin{table}[!ht]
-        \centering
-        \caption{Valores de resistencia utilizados}
-        \begin{tabular}{|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|}
-             \hline
-             Componente & Valor requerido & Valor medidido \\ 
-             \hline
-             $R_1$ & $330\,\Omega$& \\ 
-             \hline
-             $R_2$ & $1\,M\Omega$ & \\
-             \hline
-            \end{tabular}
-    	\label{tabla1}   
-	\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Desarrollo del espacio de estados}
 
 
-\vspace{5mm}
-
-\subsection{Análisis de Resultados}
-En el texto del documento usualmente se anotan citas bibliográficas, en donde la forma de hacerlo es la siguiente:
-
-
-La tensión de ruptura del diodo se puede aproximar en $0.7\,$V \cite{Malik1996,Boylestad,Horowitz1989,Gray1995}. Por otro lado, la tensión de ruptura se puede considerar de $-40\,$V \cite{Floyd2008,Behzad2013,Schilling1994}. Un diodo puede considerarse como una junta de dos materiales, uno con un dopado de portadores mayoritarios mayor al otro material de la junta \cite{Pierret1994}.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Desarrollo de la función de transferencia}
 
 
-La ecuación que describe la ley de Ohm es:
-\begin{equation}
-	V=I\cdot R
-\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Construcción del modelo simulado}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Graficando la Curva Característica del Diodo con el Osciloscopio}
-El texto va aquí.
 
-\subsection{Circuitos de Medición}
-El circuito de la Fig. \ref{fig_cir2} se utiliza para o.
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=3in]{circuito_3}
-\caption{Circuito de polarización inversa}
-\label{fig_cir2}
-\end{figure}
-
-\subsection{Simulaciones}
-\subsection{Resultados Experimentales}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,22 +117,16 @@ Las conclusiones van aquí.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendices
-\section{Demostración de la Ley de Ohm}
-El texto relacionado al apéndice va aquí.
-
-\section{Cálculos de polarización CD}
+\section{Pendiente}
 El texto relacionado al apéndice va aquí.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{}
+\section{Biografías de los autores}
 \printbibliography
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 \begin{IEEEbiographynophoto}{Juan P. Elizondo}
         Realizó sus estudios de secundaria en el SNCCCR, sede UNA Región Brunca, y actualmente cursa la carrera de Ingeniería Electrónica en el Instituto Tecnológico de Costa Rica (TEC). 
@@ -213,6 +143,8 @@ El texto relacionado al apéndice va aquí.
         
         Correo: juelizondo@estudiantec.cr
 \end{IEEEbiographynophoto}
+
+
 
 \vfill
 
