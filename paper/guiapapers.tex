@@ -24,7 +24,6 @@
 \graphicspath{{./}{./fig/}}
 
 \usepackage[natbib=true,style=trad-unsrt,backend=biber]{biblatex}
-
 \addbibresource{literatura.bib}
 
 % correct bad hyphenation here
@@ -86,7 +85,18 @@ Modelado, estados, Laplace, corriente, presión.
 
 \subsection{Sistema hidráulico}
 ...
+Los sistemas hidráulicos se basan en el principio de Pascal, el cual establece que un cambio de presión aplicado a un
+fluido confinado se transmite a todas partes del fluido y a las paredes del recipiente que lo contiene \cite{PhysicsBook}. Su ecuación general es la siguiente:
+\begin{equation}
+    p = \frac{F_1}{A_1} = \frac{F_2}{A_2}
+\end{equation}
+donde $p$ es la presión, $F_1$ y $F_2$ son las fuerzas aplicadas a los pistones 1 y 2 respectivamente, y $A_1$ y $A_2$ son las áreas de los pistones 1 y 2 respectivamente. Este principio permite que una pequeña fuerza aplicada a un pistón con un área pequeña pueda generar una fuerza mucho mayor en otro pistón con un área más grande, lo que es fundamental para el funcionamiento de la prensa hidráulica de precisión.
 
+Es importante también tener en cuenta que no todos los fluidos son iguales, por lo que se debe considerar la densidad del fluido a utilizar. Esto se establece a través de la siguiente ecuación:
+\begin{equation}
+    p = \rho g h
+\end{equation}
+donde $\rho$ es la densidad del fluido, $g$ es la aceleración debido a la gravedad, y $h$ es la altura del fluido.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Diagramas de bloques}
@@ -121,13 +131,21 @@ Las conclusiones van aquí.
 El texto relacionado al apéndice va aquí.
 
 
+\printbibliography
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Biografías de los autores}
-\printbibliography
+
+
 
  
+\begin{IEEEbiographynophoto}{Matías A. Camacho}
+        Estudiante del Instituto Tecnológico de Costa Rica (TEC) en la carrera de ingeniería electrónica.
+        
+        Correo: jeacamacho@estudiantec.cr
+\end{IEEEbiographynophoto}
+
 \begin{IEEEbiographynophoto}{Juan P. Elizondo}
         Realizó sus estudios de secundaria en el SNCCCR, sede UNA Región Brunca, y actualmente cursa la carrera de Ingeniería Electrónica en el Instituto Tecnológico de Costa Rica (TEC). 
         
