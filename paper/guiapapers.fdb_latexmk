@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber guiapapers"] 1774649993.33661 "guiapapers.bcf" "guiapapers.bbl" "guiapapers" 1774650688.23507 0
-  "guiapapers.bcf" 1774650687 106975 4a460dc311bb8e537a8892778daff49c "pdflatex"
+["biber guiapapers"] 1774649993.33661 "guiapapers.bcf" "guiapapers.bbl" "guiapapers" 1774659263.58103 0
+  "guiapapers.bcf" 1774659263 106975 4a460dc311bb8e537a8892778daff49c "pdflatex"
   "literatura.bib" 1774648138 1812 065c6c841b0bf053e2967bd0676b69bf ""
   (generated)
   "guiapapers.bbl"
   "guiapapers.blg"
   (rewritten before read)
-["pdflatex"] 1774650686.41023 "c:/Users/matia/Downloads/tarea1_Analisis/paper/guiapapers.tex" "guiapapers.pdf" "guiapapers" 1774650688.23596 0
+["pdflatex"] 1774659261.75268 "c:/Users/matia/Downloads/tarea1_Analisis/paper/guiapapers.tex" "guiapapers.pdf" "guiapapers" 1774659263.58184 0
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1774647977 124346 55158e4ffab625ef9c37e66c4ee22ffe ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1741727281 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1741727284 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -221,12 +221,12 @@
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090548324 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/matia/Downloads/tarea1_Analisis/paper/guiapapers.tex" 1774650685 7163 00d59ddf44572278a3859390575e9f79 ""
-  "guiapapers.aux" 1774650687 2403 2eae9cfa9a7fd8774d363eee1f4d21b2 "pdflatex"
+  "c:/Users/matia/Downloads/tarea1_Analisis/paper/guiapapers.tex" 1774659261 7345 69057c044b33d25970b4299c8ce0278a ""
+  "guiapapers.aux" 1774659263 2403 2eae9cfa9a7fd8774d363eee1f4d21b2 "pdflatex"
   "guiapapers.bbl" 1774649995 1848 846a8f102e3df089f7cdce4a64afeff1 "biber guiapapers"
-  "guiapapers.out" 1774650687 2450 b509edae1be01c1653295899926cf9f0 "pdflatex"
-  "guiapapers.run.xml" 1774650687 2455 dbc4f500eb2476a60552ca23f2b67fd6 "pdflatex"
-  "guiapapers.tex" 1774650685 7163 00d59ddf44572278a3859390575e9f79 ""
+  "guiapapers.out" 1774659263 2450 b509edae1be01c1653295899926cf9f0 "pdflatex"
+  "guiapapers.run.xml" 1774659263 2455 dbc4f500eb2476a60552ca23f2b67fd6 "pdflatex"
+  "guiapapers.tex" 1774659261 7345 69057c044b33d25970b4299c8ce0278a ""
   "instructivo.sty" 1774648931 9945 6e73d3f6dfa117e9424bf62a4f29314d ""
   (generated)
   "guiapapers.aux"
