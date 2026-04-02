@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>guiapapers.bcf</file>
+      <file>tarea_1.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>guiapapers.bbl</file>
+      <file>tarea_1.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -67,19 +67,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>guiapapers</infile>
+      <infile>tarea_1</infile>
     </cmdline>
     <input>
-      <file>guiapapers.bcf</file>
+      <file>tarea_1.bcf</file>
     </input>
     <output>
-      <file>guiapapers.bbl</file>
+      <file>tarea_1.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>guiapapers.bbl</file>
+      <file>tarea_1.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>guiapapers.bcf</file>
+      <file>tarea_1.bcf</file>
     </requires>
     <requires type="editable">
       <file>literatura.bib</file>

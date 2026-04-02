@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/guiapapers"] 0 "build/guiapapers.bcf" "build/guiapapers.bbl" "build/guiapapers" 1775089637.07998 -1
-  "build/guiapapers.bcf" 1775089635 108047 715eccb1f08d93963fa30a7fa27b8d40 "pdflatex"
+["biber build/tarea_1"] 1775090076.38348 "build/tarea_1.bcf" "build/tarea_1.bbl" "build/tarea_1" 1775090107.69533 0
+  "build/tarea_1.bcf" 1775090106 108047 715eccb1f08d93963fa30a7fa27b8d40 "pdflatex"
   "literatura.bib" 1775085593 909 f3774af18b7fd1d3ef1d874f51e9f4fa ""
   (generated)
-  "build/guiapapers.bbl"
-  "build/guiapapers.blg"
+  "build/tarea_1.bbl"
+  "build/tarea_1.blg"
   (rewritten before read)
-["pdflatex"] 1775089628.72533 "c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/guiapapers.tex" "build/guiapapers.pdf" "guiapapers" 1775089637.0826 0
+["pdflatex"] 1775090099.59003 "c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/tarea_1.tex" "build/tarea_1.pdf" "tarea_1" 1775090107.69775 0
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775077119 84158 d77284a6843bde1e4b9764f09fb2e89e ""
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1773891445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1773891449 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -241,21 +241,21 @@
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090548324 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "build/guiapapers.aux" 1775089635 4420 121d2c2b1587526866fada4897a6e42e "pdflatex"
-  "build/guiapapers.bbl" 1775085608 5982 216bb4dad55215b6596881d38130dd2e "biber build/guiapapers"
-  "build/guiapapers.out" 1775089635 2803 d0132cdcadc3a48e25aaa1822db1fae7 "pdflatex"
-  "build/guiapapers.run.xml" 1775089635 2455 dbc4f500eb2476a60552ca23f2b67fd6 "pdflatex"
-  "c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/guiapapers.tex" 1775089607 11949 7b09aa47b427e66d3fba3e4fb2617a0a ""
+  "build/tarea_1.aux" 1775090106 4420 121d2c2b1587526866fada4897a6e42e "pdflatex"
+  "build/tarea_1.bbl" 1775090082 5982 216bb4dad55215b6596881d38130dd2e "biber build/tarea_1"
+  "build/tarea_1.out" 1775090106 2803 d0132cdcadc3a48e25aaa1822db1fae7 "pdflatex"
+  "build/tarea_1.run.xml" 1775090106 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
+  "c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/tarea_1.tex" 1775089607 11949 7b09aa47b427e66d3fba3e4fb2617a0a ""
   "fig/circuito_solenoide.tex" 1775086830 545 8f9144cd5d3941ffc25a01a7f493cb1a ""
   "fig/diagrama_cuerpolibre_solenoide.tex" 1775087356 763 6184e5951b423ccd9c86e56406fdab01 ""
-  "guiapapers.tex" 1775089607 11949 7b09aa47b427e66d3fba3e4fb2617a0a ""
   "instructivo.sty" 1773889982 9675 6e73d3f6dfa117e9424bf62a4f29314d ""
+  "tarea_1.tex" 1775089607 11949 7b09aa47b427e66d3fba3e4fb2617a0a ""
   (generated)
-  "build/guiapapers.aux"
-  "build/guiapapers.bcf"
-  "build/guiapapers.log"
-  "build/guiapapers.out"
-  "build/guiapapers.pdf"
-  "build/guiapapers.run.xml"
-  "build/guiapapers.thm"
+  "build/tarea_1.aux"
+  "build/tarea_1.bcf"
+  "build/tarea_1.log"
+  "build/tarea_1.out"
+  "build/tarea_1.pdf"
+  "build/tarea_1.run.xml"
+  "build/tarea_1.thm"
   (rewritten before read)

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  1 APR 2026 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  1 APR 2026 18:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/guiapapers.tex
-(c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/guiapapers.tex
+**c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/tarea_1.tex
+(c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/tarea_1.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
@@ -1128,13 +1128,13 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 38.
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-) (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.aux
+) (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\tarea_1.aux
 LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 14.
 )
-\openout1 = `guiapapers.aux'.
+\openout1 = `tarea_1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
@@ -1230,9 +1230,9 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 38.
- (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.out) (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.out)
+ (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\tarea_1.out) (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\tarea_1.out)
 \@outlinefile=\write5
-\openout5 = `guiapapers.out'.
+\openout5 = `tarea_1.out'.
 
 
 *geometry* driver: auto-detecting
@@ -1277,11 +1277,11 @@ File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `guiapapers.bcf'.
+\openout4 = `tarea_1.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'guiapapers.bbl' found.
- (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.bbl)
+Package biblatex Info: ... file 'tarea_1.bbl' found.
+ (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\tarea_1.bbl)
 Package biblatex Info: Reference section=0 on input line 38.
 Package biblatex Info: Reference segment=0 on input line 38.
  (fig/circuito_solenoide.tex
@@ -1315,11 +1315,11 @@ Underfull \hbox (badness 1448) in paragraph at lines 265--267
  []
 
 \tf@thm=\write6
-\openout6 = `guiapapers.thm'.
+\openout6 = `tarea_1.thm'.
 
 [3
 
-] (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.aux
+] (c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\tarea_1.aux
 LaTeX Info: Redefining \sptext on input line 14.
 LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
@@ -1328,22 +1328,22 @@ LaTeX Info: Redefining \% on input line 14.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `guiapapers.out' has not changed.
+Package rerunfilecheck Info: File `tarea_1.out' has not changed.
 (rerunfilecheck)             Checksum: D0132CDCADC3A48E25AAA1822DB1FAE7;2803.
-Package logreq Info: Writing requests to 'guiapapers.run.xml'.
-\openout1 = `guiapapers.run.xml'.
+Package logreq Info: Writing requests to 'tarea_1.run.xml'.
+\openout1 = `tarea_1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  56591 strings out of 467867
- 1333410 string characters out of 5418334
- 2384100 words of memory out of 5000000
+ 1333329 string characters out of 5418334
+ 2384085 words of memory out of 5000000
  84822 multiletter control sequences out of 15000+600000
  759056 words of font info for 165 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 117i,11n,121p,1250b,2063s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,11n,121p,1247b,2063s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\guiapapers.pdf (3 pages, 120850 bytes).
+Output written on c:\LaTex\tarea1_Analisis\tarea1_Analisis\paper\build\tarea_1.pdf (3 pages, 120850 bytes).
 PDF statistics:
  177 PDF objects out of 1000 (max. 8388607)
  41 named destinations out of 1000 (max. 500000)
