@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  2 APR 2026 14:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  2 APR 2026 14:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1270,13 +1270,12 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `tarea_1.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'tarea_1.bbl' not found.
-
-No file tarea_1.bbl.
+Package biblatex Info: ... file 'tarea_1.bbl' found.
+ (tarea_1.bbl)
 Package biblatex Info: Reference section=0 on input line 33.
 Package biblatex Info: Reference segment=0 on input line 33.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
-(C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+ (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
@@ -1290,35 +1289,21 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 LaTeX Font Info:    Trying to load font information for U+trsy on input line 98.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/trsym\utrsy.fd
 File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
-)
-
-LaTeX Warning: Citation 'Alexander2018' on page 1 undefined on input line 105.
-
-
-LaTeX Warning: Citation 'sadiku2001electromagnetics' on page 1 undefined on input line 139.
-
-
-LaTeX Warning: Citation 'mathworks_solenoid' on page 1 undefined on input line 147.
-
-
-LaTeX Warning: Citation 'PhysicsBook' on page 1 undefined on input line 158.
-
-[1{C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+) [1{C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-
-LaTeX Warning: Empty bibliography on input line 245.
-
-
 Underfull \hbox (badness 1448) in paragraph at lines 260--262
 \T1/phv/b/n/8 Juan P. Eli-zon-do \T1/phv/m/n/8 Reali-zó sus es-tu-dios de se-cun-da-ria en el
  []
 
+[2]
 \tf@thm=\write6
 \openout6 = `tarea_1.thm'.
 
-[2] (tarea_1.aux
+ [3
+
+] (tarea_1.aux
 LaTeX Info: Redefining \sptext on input line 16.
 LaTeX Info: Redefining \. on input line 16.
 LaTeX Info: Redefining \% on input line 16.
@@ -1327,33 +1312,24 @@ LaTeX Info: Redefining \% on input line 16.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `tarea_1.out' has not changed.
-(rerunfilecheck)             Checksum: 54DA386075A1AEB7352A534A42F2A44E;2803.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                tarea_1
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: D0132CDCADC3A48E25AAA1822DB1FAE7;2803.
 Package logreq Info: Writing requests to 'tarea_1.run.xml'.
 \openout1 = `tarea_1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55163 strings out of 474486
- 1292764 string characters out of 5743755
- 2290472 words of memory out of 5000000
- 76805 multiletter control sequences out of 15000+600000
- 690501 words of font info for 162 fonts, out of 8000000 for 9000
+ 55211 strings out of 474486
+ 1294173 string characters out of 5743755
+ 2291605 words of memory out of 5000000
+ 76846 multiletter control sequences out of 15000+600000
+ 689404 words of font info for 161 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  117i,8n,121p,1205b,1803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on tarea_1.pdf (2 pages, 115383 bytes).
+Output written on tarea_1.pdf (3 pages, 119197 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

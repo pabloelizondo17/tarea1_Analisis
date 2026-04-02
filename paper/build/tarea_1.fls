@@ -472,6 +472,11 @@ INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\spanis
 INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 OUTPUT tarea_1.bcf
+INPUT tarea_1.bbl
+INPUT .\tarea_1.bbl
+INPUT .\tarea_1.bbl
+INPUT .\tarea_1.bbl
+INPUT tarea_1.bbl
 INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvrc8t.tfm
 INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
@@ -533,10 +538,8 @@ INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8
 INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
-OUTPUT tarea_1.thm
-INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
-INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\matia\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+OUTPUT tarea_1.thm
 INPUT tarea_1.aux
 INPUT .\tarea_1.out
 INPUT .\tarea_1.out

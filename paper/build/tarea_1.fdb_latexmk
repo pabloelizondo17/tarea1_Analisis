@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber tarea_1"] 0 "tarea_1.bcf" "tarea_1.bbl" "tarea_1" 0 0
-  "literatura.bib" 0 -1 0 ""
-  "tarea_1.bcf" 0 -1 0 "pdflatex"
+["biber tarea_1"] 1775162602.58734 "tarea_1.bcf" "tarea_1.bbl" "tarea_1" 1775162611.58371 0
+  "literatura.bib" 1775161138 940 f3774af18b7fd1d3ef1d874f51e9f4fa ""
+  "tarea_1.bcf" 1775162611 107197 155645c9bd12e46d3aa3149f932f9d0b "pdflatex"
   (generated)
   "tarea_1.bbl"
   "tarea_1.blg"
   (rewritten before read)
-["pdflatex"] 1775161964.40767 "c:/Users/matia/Downloads/tarea1_Analisis/paper/build/tarea_1.tex" "tarea_1.pdf" "tarea_1" 1775161966.81678 0
+["pdflatex"] 1775162609.4409 "c:/Users/matia/Downloads/tarea1_Analisis/paper/build/tarea_1.tex" "tarea_1.pdf" "tarea_1" 1775162611.58474 0
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1774647977 124346 55158e4ffab625ef9c37e66c4ee22ffe ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1741727281 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1741727284 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -246,13 +246,13 @@
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090548324 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/matia/Downloads/tarea1_Analisis/paper/build/tarea_1.tex" 1775161958 12137 9b1a316d080c78a7914b2d87a741ec5b ""
+  "c:/Users/matia/Downloads/tarea1_Analisis/paper/build/tarea_1.tex" 1775162599 12135 b07549869e3501504e2909cd23baca91 ""
   "instructivo.sty" 1775161410 9945 6e73d3f6dfa117e9424bf62a4f29314d ""
-  "tarea_1.aux" 1775161966 4039 7d2f662da1eecf38e3a0c10bf2a6932f "pdflatex"
-  "tarea_1.bbl" 0 -1 0 "biber tarea_1"
-  "tarea_1.out" 1775161966 2803 54da386075a1aeb7352a534a42f2a44e "pdflatex"
-  "tarea_1.run.xml" 1775161966 2434 a74e7d80627b7d98b0110d2d2632cd80 "pdflatex"
-  "tarea_1.tex" 1775161958 12137 9b1a316d080c78a7914b2d87a741ec5b ""
+  "tarea_1.aux" 1775162611 4347 f7703a7c754399e586874cf8e763522e "pdflatex"
+  "tarea_1.bbl" 1775162604 5455 27702a975f5168370438098fa115109a "biber tarea_1"
+  "tarea_1.out" 1775162611 2803 d0132cdcadc3a48e25aaa1822db1fae7 "pdflatex"
+  "tarea_1.run.xml" 1775162611 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
+  "tarea_1.tex" 1775162599 12135 b07549869e3501504e2909cd23baca91 ""
   (generated)
   "tarea_1.aux"
   "tarea_1.bcf"

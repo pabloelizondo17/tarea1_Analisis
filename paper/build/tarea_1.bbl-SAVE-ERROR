@@ -1,0 +1,139 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Alexander2018}{book}{}
+      \name{author}{2}{}{%
+        {{hash=38f17d4baab84e2e893ad24888815193}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={Charles\bibnamedelima K.},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=acd2910fdff85c25e324e4401e07500d}{%
+           family={Sadiku},
+           familyi={S\bibinitperiod},
+           given={Matthew\bibnamedelimb N.\bibnamedelimi O.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
+      \strng{fullhash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
+      \strng{bibnamehash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
+      \strng{authorbibnamehash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
+      \strng{authornamehash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
+      \strng{authorfullhash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6}
+      \field{title}{Fundamentos de Circuitos Eléctricos}
+      \field{year}{2018}
+    \endentry
+    \entry{sadiku2001electromagnetics}{book}{}
+      \name{author}{1}{}{%
+        {{hash=acd2910fdff85c25e324e4401e07500d}{%
+           family={Sadiku},
+           familyi={S\bibinitperiod},
+           given={Matthew\bibnamedelimb N.\bibnamedelimi O.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{acd2910fdff85c25e324e4401e07500d}
+      \strng{fullhash}{acd2910fdff85c25e324e4401e07500d}
+      \strng{bibnamehash}{acd2910fdff85c25e324e4401e07500d}
+      \strng{authorbibnamehash}{acd2910fdff85c25e324e4401e07500d}
+      \strng{authornamehash}{acd2910fdff85c25e324e4401e07500d}
+      \strng{authorfullhash}{acd2910fdff85c25e324e4401e07500d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{Elements of Electromagnetics}
+      \field{year}{2001}
+    \endentry
+    \entry{mathworks_solenoid}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={{MathWorks}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2026-04-01}
+      \field{title}{Solenoid — Electrical characteristics and generated force of solenoid}
+      \field{year}{n.d.}
+      \verb{urlraw}
+      \verb https://la.mathworks.com/help/sps/ref/solenoid.html
+      \endverb
+      \verb{url}
+      \verb https://la.mathworks.com/help/sps/ref/solenoid.html
+      \endverb
+    \endentry
+    \entry{PhysicsBook}{book}{}
+      \name{author}{2}{}{%
+        {{hash=cdcb55db9d535bec955f5911f1ac4e59}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Hugh\bibnamedelima D.},
+           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=073003dafd6f7a0d40236b25403e4573}{%
+           family={Freedman},
+           familyi={F\bibinitperiod},
+           given={Roger\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{f41741dd065bae8cbcbaeee29424c299}
+      \strng{fullhash}{f41741dd065bae8cbcbaeee29424c299}
+      \strng{bibnamehash}{f41741dd065bae8cbcbaeee29424c299}
+      \strng{authorbibnamehash}{f41741dd065bae8cbcbaeee29424c299}
+      \strng{authornamehash}{f41741dd065bae8cbcbaeee29424c299}
+      \strng{authorfullhash}{f41741dd065bae8cbcbaeee29424c299}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{13ra}
+      \field{title}{University Physics with Modern Physics}
+      \field{year}{2012}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
