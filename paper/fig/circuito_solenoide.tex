@@ -1,0 +1,12 @@
+\begin{circuitikz}[american]
+  \draw
+    (0,0) to[V, v=$V_s$, invert]  (0,3)    % Fuente: lado izquierdo, sube
+          to[R, l=$R$]            (3,3)    % Resistencia: hilo superior
+          -- (5,3)                         % esquina superior derecha
+          to[L, l=$L$]            (5,0)    % Bobina: lado derecho, baja
+          -- (0,0);                        % hilo inferior
+
+  % Flecha de corriente en el hilo inferior, bien alejada
+  \draw[->, blue] (2.5,0) -- (1.0,0)
+        node[midway, below] {$i(t)$};
+\end{circuitikz}
