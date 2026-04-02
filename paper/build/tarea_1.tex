@@ -20,17 +20,12 @@
 
 \documentclass[journal]{IEEEtran}
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 \usepackage{circuitikz}          % antes de babel
-\usepackage[spanish,             
-            es-noshorthands]{babel}
+\usepackage[spanish, es-noshorthands]{babel}
 \usepackage{float}
 \usepackage{instructivo}
 \graphicspath{{./}{./fig/}}
-\usepackage[natbib=true,
-            style=trad-unsrt,
-            backend=biber]{biblatex}
+\usepackage[natbib=true, style=trad-unsrt, backend=biber]{biblatex}
 \addbibresource{literatura.bib}
 
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -94,7 +89,7 @@ que varía su movimiento según la intensidad del campo magnético generado.
 
 \begin{figure}[H]
   \centering
-  \input{fig/circuito_solenoide.tex} 
+  %%\input{fig/circuito_solenoide.tex} 
   \caption{Circuito equivalente de un solenoide.}
   \label{fig:circuito_solenoide}
 \end{figure}
@@ -189,7 +184,7 @@ siguiente diagrama de cuerpo libre.
 
 \begin{figure}[H]
   \centering
-  \input{fig/diagrama_cuerpolibre_solenoide.tex} 
+  %%\input{fig/diagrama_cuerpolibre_solenoide.tex} 
   \caption{Diagrama de cuerpo libre del solenoide.}
   \label{fig:diagrama_cuerpolibre_solenoide}
 \end{figure}
