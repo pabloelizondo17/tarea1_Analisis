@@ -1,4 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % bare_jrnl.tex
 % V1.4b
 % 2015/08/26
@@ -89,7 +88,7 @@ que varía su movimiento según la intensidad del campo magnético generado.
 
 \begin{figure}[H]
   \centering
-  %%\input{fig/circuito_solenoide.tex} 
+  \input{fig/circuito_solenoide} 
   \caption{Circuito equivalente de un solenoide.}
   \label{fig:circuito_solenoide}
 \end{figure}
@@ -184,7 +183,7 @@ siguiente diagrama de cuerpo libre.
 
 \begin{figure}[H]
   \centering
-  %%\input{fig/diagrama_cuerpolibre_solenoide.tex} 
+  \input{fig/diagrama_cuerpolibre_solenoide.tex} 
   \caption{Diagrama de cuerpo libre del solenoide.}
   \label{fig:diagrama_cuerpolibre_solenoide}
 \end{figure}
@@ -211,6 +210,18 @@ realizar una linealización para poder obtener un modelo de espacio de estados y
 la ecuación \ref{eq:eléctrica_solenoide} debido a su tercer término.
 
 \subsection{Sistema hidráulico}
+
+Para analizar el sistema hidráulico, se procede a definir dos fuerzas, la entrante (i.e., la salida del sistema del solenoide) y otra de salida (i.e., la fuerza de presión que se genera en el pistón 2). Para esto, se define la siguiente ecuación.
+\begin{equation}
+    F_{out} = ( \frac{F_e}{A_1}-\rho g x ) A_2
+\end{equation}
+
+Donde $F_e$ corresponde a la fuerza descrita en la sección anterior.
+
+Visto desde el punto de vista del usuario, de una prensa se espera escoger un valor de presión, por lo que la ecuación que define el valor buscado es la siguiente.
+\begin{equation}
+    p_{out} = \frac{F_{out}}{A_2} = \frac{F_e}{A_1}-\rho g x=\frac{i^2}{2} \frac{dL}{dx} \frac{1}{A_1}-\rho g x
+\end{equation}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

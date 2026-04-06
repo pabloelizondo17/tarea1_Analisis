@@ -1,0 +1,22 @@
+\begin{circuitikz}[american]
+    % Cuadrado (masa)
+    \draw (0,0) rectangle (2,2);
+
+    % Línea punteada vertical (referencia)
+    \draw[dashed] (1,-1) -- (1,3);
+
+    % Etiqueta de la línea
+    \node at (1.5,2.5) {$x = 0$};
+
+    % Texto en el centro
+    \node at (1,1) {$m$};
+
+    % ===== Entrada (lado izquierdo) =====
+    \draw[->] (-0.1,1) -- (-1.5,1)
+        node[midway, above] {$F_e$};
+
+    % ===== Salida (lado derecho) =====
+    \draw[->] (2.1,1) -- (3.5,1)
+        node[midway, above] {$F_{out}$};
+
+\end{circuitikz}

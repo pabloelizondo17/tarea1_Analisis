@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  2 APR 2026 14:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  5 APR 2026 19:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/matia/Downloads/tarea1_Analisis/paper/build/tarea_1.tex
-(c:/Users/matia/Downloads/tarea1_Analisis/paper/build/tarea_1.tex
+**c:/Users/matia/Downloads/tarea1_Analisis/paper/tarea_1.tex
+(c:/Users/matia/Downloads/tarea1_Analisis/paper/tarea_1.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
@@ -1117,77 +1117,77 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count489
 \@quotereset=\count490
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 33.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 32.
 (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-) (tarea_1.aux
-LaTeX Info: Redefining \. on input line 16.
-LaTeX Info: Redefining \% on input line 16.
+) (c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.aux
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
 )
 \openout1 = `tarea_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/txsyc/m/n on input line 33.
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/txsyc/m/n on input line 32.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 32.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <5> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <7> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <8> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <11> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <11> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <17> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <20> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <20> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <24> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 32.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <24> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 32.
 
 -- Lines per column: 57 (approximate, difference = 6.99286pt).
 (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
@@ -1209,18 +1209,18 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \. on input line 33.
-LaTeX Info: Redefining \% on input line 33.
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 33.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 32.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 33.
- (tarea_1.out) (tarea_1.out)
+Package hyperref Info: Link coloring OFF on input line 32.
+ (c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.out) (c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.out)
 \@outlinefile=\write5
 \openout5 = `tarea_1.out'.
 
@@ -1271,42 +1271,46 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'tarea_1.bbl' found.
- (tarea_1.bbl)
-Package biblatex Info: Reference section=0 on input line 33.
-Package biblatex Info: Reference segment=0 on input line 33.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
+ (c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.bbl)
+Package biblatex Info: Reference section=0 on input line 32.
+Package biblatex Info: Reference segment=0 on input line 32.
+ (fig/circuito_solenoide.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 98.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+trsy on input line 98.
+LaTeX Font Info:    Trying to load font information for U+trsy on input line 3.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/trsym\utrsy.fd
 File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
-) [1{C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+))
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-]
-Underfull \hbox (badness 1448) in paragraph at lines 260--262
+] (fig/diagrama_cuerpolibre_solenoide.tex)
+Underfull \vbox (badness 3323) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 1448) in paragraph at lines 271--273
 \T1/phv/b/n/8 Juan P. Eli-zon-do \T1/phv/m/n/8 Reali-zó sus es-tu-dios de se-cun-da-ria en el
  []
 
-[2]
 \tf@thm=\write6
 \openout6 = `tarea_1.thm'.
 
- [3
-
-] (tarea_1.aux
-LaTeX Info: Redefining \sptext on input line 16.
-LaTeX Info: Redefining \. on input line 16.
-LaTeX Info: Redefining \% on input line 16.
+[3] (c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.aux
+LaTeX Info: Redefining \sptext on input line 14.
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
 )
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1319,17 +1323,17 @@ Package logreq Info: Writing requests to 'tarea_1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55211 strings out of 474486
- 1294173 string characters out of 5743755
- 2291605 words of memory out of 5000000
- 76846 multiletter control sequences out of 15000+600000
+ 55718 strings out of 474486
+ 1308896 string characters out of 5743755
+ 2296605 words of memory out of 5000000
+ 77342 multiletter control sequences out of 15000+600000
  689404 words of font info for 161 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 117i,8n,121p,1205b,1803s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,11n,121p,1199b,1803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on tarea_1.pdf (3 pages, 119197 bytes).
+Output written on c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.pdf (3 pages, 122617 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

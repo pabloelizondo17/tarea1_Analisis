@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber tarea_1"] 1775162602.58734 "tarea_1.bcf" "tarea_1.bbl" "tarea_1" 1775162611.58371 0
+["biber build/tarea_1"] 1775437352.70357 "build/tarea_1.bcf" "build/tarea_1.bbl" "build/tarea_1" 1775437361.6657 0
+  "build/tarea_1.bcf" 1775437361 107197 155645c9bd12e46d3aa3149f932f9d0b "pdflatex"
   "literatura.bib" 1775161138 940 f3774af18b7fd1d3ef1d874f51e9f4fa ""
-  "tarea_1.bcf" 1775162611 107197 155645c9bd12e46d3aa3149f932f9d0b "pdflatex"
   (generated)
-  "tarea_1.bbl"
-  "tarea_1.blg"
+  "build/tarea_1.bbl"
+  "build/tarea_1.blg"
   (rewritten before read)
-["pdflatex"] 1775162609.4409 "c:/Users/matia/Downloads/tarea1_Analisis/paper/build/tarea_1.tex" "tarea_1.pdf" "tarea_1" 1775162611.58474 0
+["pdflatex"] 1775437359.45557 "c:/Users/matia/Downloads/tarea1_Analisis/paper/tarea_1.tex" "build/tarea_1.pdf" "tarea_1" 1775437361.66659 0
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1774647977 124346 55158e4ffab625ef9c37e66c4ee22ffe ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1741727281 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1741727284 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -246,19 +246,21 @@
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090548324 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/matia/Downloads/tarea1_Analisis/paper/build/tarea_1.tex" 1775162599 12135 b07549869e3501504e2909cd23baca91 ""
+  "build/tarea_1.aux" 1775437361 4347 5af4cd55ad776ea9088d8c84b981b0ac "pdflatex"
+  "build/tarea_1.bbl" 1775437354 5455 27702a975f5168370438098fa115109a "biber build/tarea_1"
+  "build/tarea_1.out" 1775437361 2803 d0132cdcadc3a48e25aaa1822db1fae7 "pdflatex"
+  "build/tarea_1.run.xml" 1775437361 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
+  "c:/Users/matia/Downloads/tarea1_Analisis/paper/tarea_1.tex" 1775436622 12782 137fac36eda82f134dd76a80ab0e8311 ""
+  "fig/circuito_solenoide.tex" 1775161138 545 8f9144cd5d3941ffc25a01a7f493cb1a ""
+  "fig/diagrama_cuerpolibre_solenoide.tex" 1775161138 763 6184e5951b423ccd9c86e56406fdab01 ""
   "instructivo.sty" 1775161410 9945 6e73d3f6dfa117e9424bf62a4f29314d ""
-  "tarea_1.aux" 1775162611 4347 f7703a7c754399e586874cf8e763522e "pdflatex"
-  "tarea_1.bbl" 1775162604 5455 27702a975f5168370438098fa115109a "biber tarea_1"
-  "tarea_1.out" 1775162611 2803 d0132cdcadc3a48e25aaa1822db1fae7 "pdflatex"
-  "tarea_1.run.xml" 1775162611 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
-  "tarea_1.tex" 1775162599 12135 b07549869e3501504e2909cd23baca91 ""
+  "tarea_1.tex" 1775436622 12782 137fac36eda82f134dd76a80ab0e8311 ""
   (generated)
-  "tarea_1.aux"
-  "tarea_1.bcf"
-  "tarea_1.log"
-  "tarea_1.out"
-  "tarea_1.pdf"
-  "tarea_1.run.xml"
-  "tarea_1.thm"
+  "build/tarea_1.aux"
+  "build/tarea_1.bcf"
+  "build/tarea_1.log"
+  "build/tarea_1.out"
+  "build/tarea_1.pdf"
+  "build/tarea_1.run.xml"
+  "build/tarea_1.thm"
   (rewritten before read)
