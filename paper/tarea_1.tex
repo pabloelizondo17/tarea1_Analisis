@@ -106,21 +106,21 @@ eléctrico de este circuito \cite{Alexander2018}.
 \begin{equation}
 \begin{aligned}
     V_s &= i(t)R + L \frac{di}{dt} + i(t) \frac{dx}{dt} \frac{dL(x)}{dx} \\
-        &= iR + L \dot{i} + i \dot{x} \frac{dL(x)}{dx}
+        &= iR + L \dot{i} + i \dot{x} \frac{dL(x)}{dx} \\
+        &\approx iR + L \dot{i}
 \end{aligned}
 \label{eq:eléctrica_solenoide}
 \end{equation}
 
-Esta primera ecuación relaciona la tensión aplicada en la entrada, con la corriente que fluye 
-por el circuito. Si se observa, además de la aplicación de la ley de Ohm para el estado estacionario,
-se consideran las variaciones en el tiempo de la corriente, así como el último término que toma en cuenta 
-a la tensión "back-EMF" electromagnética, generada por el movimiento del émbolo.
+Esta ecuación \ref{eq:eléctrica_solenoide} relaciona la tensión de entrada con la corriente del circuito. Además de la caída de tensión resistiva 
+y la caída en el inductor ($L\frac{di}{dt}$), se incluye el término de fuerza contraelectromotriz (back-EMF) inducida 
+por el movimiento del émbolo. Para los fines de esta aplicación, donde la dinámica mecánica es significativamente más 
+lenta que la eléctrica o el desplazamiento es reducido, este último término se considera despreciable.
 
 \setlength{\parskip}{1em}
 
-Así entonces, en el estado estacionario en el que no existe movimiento del émbolo, la ecuación se reduce
-a únicamente el siguiente término. No obstante, para efectos del análisis dinámico del modelo y su linealización, 
-se van a considerar los tres términos completos.
+En el estado estacionario en el que no existe movimiento del émbolo, 
+la ecuación se reduce a únicamente el siguiente término. 
 
 \begin{equation}
     V_s = i(t)R
@@ -134,7 +134,7 @@ En donde además, se sabe que la resistencia depende del material propiamente, d
 \label{eq:resistencia_solenoide}
 \end{equation}
 
-Finalmente, la fuerza magnética generada por la bobina sobre el émbolo, se puede describir por medio
+Por su parte, la fuerza magnética generada por la bobina sobre el émbolo, se puede describir por medio
 de la siguiente ecuación \cite{sadiku2001electromagnetics}.
 
 \begin{equation}
@@ -208,6 +208,77 @@ Como se puede observar en la ecuación \ref{eq:dinámica_solenoide}, la dinámic
 de la corriente, así como a la dependencia de la posición del émbolo en el término de la fuerza magnética. Lo anterior, hace necesario
 realizar una linealización para poder obtener un modelo de espacio de estados y función de transferencia, lo mismo ocurre para 
 la ecuación \ref{eq:eléctrica_solenoide} debido a su tercer término.
+
+\setlength{\parskip}{1em}
+
+Definiendo el punto de operación:
+
+\[
+\begin{aligned}
+    \dot{x} & = 0 \\
+    \ddot{x} & = 0 \\
+    x & = x_{0} \\
+    i & = i_{0} 
+\end{aligned}
+\]
+
+La ecuación de equilibrio tiene la forma:
+
+\begin{equation}
+\begin{aligned}
+        0 &= m \ddot{x} + b \dot{x} + kx - \frac{i^2}{2} \frac{dL(x)}{dx} \\
+          &= kx_{0} - \frac{i_{0}^2}{2} \frac{dL(x_{0})}{dx} \\
+          &= kx_{0} - F_{e, 0}(x_{0}, i_{0})
+\end{aligned}
+\label{eq:equilibrio}
+\end{equation}
+
+La expansión en serie de Taylor para la no linealidad dentro de la ecuación dinámica,
+se aplica de la siguiente manera:
+
+\begin{equation}
+\begin{aligned}
+        F_{e}(x, i) - F_{e}(x_{0}, i_{0}) &= \frac{\partial F_{e}}{\partial x} \cdot \Delta x + \frac{\partial F_{e}}{\partial i} \cdot \Delta i \\
+        \Delta F_{e}                      &= \frac{\partial F_{e}}{\partial x} \cdot \Delta x + \frac{\partial F_{e}}{\partial i} \cdot \Delta i 
+\end{aligned}
+\label{eq:serieTaylor}
+\end{equation}
+
+Aplicando las derivadas parciales:
+
+\begin{equation}
+\begin{aligned}
+    \frac{\partial F_{e}}{\partial x}                      &= \frac{i^2}{2} \cdot \frac{d^2L(x)}{dx^2} \\
+    \left. \frac{\partial F_{e}}{\partial x} \right|_{0} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} 
+\end{aligned}
+\label{eq:derivadaParcial_x}
+\end{equation}
+
+
+\begin{equation}
+\begin{aligned}
+    \frac{\partial F_{e}}{\partial i}                      &= i \cdot \frac{dL(x)}{dx} \\
+    \left. \frac{\partial F_{e}}{\partial i} \right|_{0} &= i_{0} \cdot \frac{dL(x_{0})}{dx}
+\end{aligned}
+\label{eq:derivadaParcial_i}
+\end{equation}
+
+Dando como resultado: 
+
+\begin{equation}
+\begin{aligned}
+    \Delta F_{e} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} \cdot \Delta x + i_{0} \cdot \frac{dL(x_{0})}{dx} \cdot \Delta i \\
+    \Delta F_{e} &= a \cdot \Delta x + b \cdot \Delta i
+\end{aligned}
+\label{eq:resultado_serieTaylor}
+\end{equation}
+
+
+
+
+
+
+
 
 \subsection{Sistema hidráulico}
 
