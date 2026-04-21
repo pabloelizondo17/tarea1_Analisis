@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/tarea_1"] 1776800826.78529 "build/tarea_1.bcf" "build/tarea_1.bbl" "build/tarea_1" 1776801759.20765 0
-  "build/tarea_1.bcf" 1776801758 107197 155645c9bd12e46d3aa3149f932f9d0b "pdflatex"
+["biber build/tarea_1"] 1776800826.78529 "build/tarea_1.bcf" "build/tarea_1.bbl" "build/tarea_1" 1776808497.9338 0
+  "build/tarea_1.bcf" 1776808497 107197 155645c9bd12e46d3aa3149f932f9d0b "pdflatex"
   "literatura.bib" 1775161138 940 f3774af18b7fd1d3ef1d874f51e9f4fa ""
   (generated)
   "build/tarea_1.bbl"
   "build/tarea_1.blg"
   (rewritten before read)
-["pdflatex"] 1776801756.82142 "c:/Users/matia/Downloads/tarea1_Analisis/paper/tarea_1.tex" "build/tarea_1.pdf" "tarea_1" 1776801759.20854 0
+["pdflatex"] 1776808495.8173 "c:/Users/matia/Downloads/tarea1_Analisis/paper/tarea_1.tex" "build/tarea_1.pdf" "tarea_1" 1776808497.9347 0
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775790566 124346 55158e4ffab625ef9c37e66c4ee22ffe ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1741727281 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1741727284 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -37,6 +37,7 @@
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233951854 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/tfm/public/txfonts/txsyc.tfm" 977342760 1084 75e807e9e71f7a312e4e1187dce5e93b ""
+  "C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -246,15 +247,15 @@
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090548324 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "build/tarea_1.aux" 1776801758 5138 ba08629c84be67c0ee24c1e600dd224f "pdflatex"
+  "build/tarea_1.aux" 1776808497 5573 6d0b9e02347fa405e590e50cc3ace63f "pdflatex"
   "build/tarea_1.bbl" 1776800840 5455 27702a975f5168370438098fa115109a "biber build/tarea_1"
-  "build/tarea_1.out" 1776801758 2803 d0132cdcadc3a48e25aaa1822db1fae7 "pdflatex"
-  "build/tarea_1.run.xml" 1776801758 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
-  "c:/Users/matia/Downloads/tarea1_Analisis/paper/tarea_1.tex" 1776801756 15632 4aacec4d6faba68662a0dc9a2f5d959f ""
+  "build/tarea_1.out" 1776808497 2803 d0132cdcadc3a48e25aaa1822db1fae7 "pdflatex"
+  "build/tarea_1.run.xml" 1776808497 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
+  "c:/Users/matia/Downloads/tarea1_Analisis/paper/tarea_1.tex" 1776808487 19330 91799f02a0afd6b8ffdea38d5fdbf3dd ""
   "fig/circuito_solenoide.tex" 1775161138 545 8f9144cd5d3941ffc25a01a7f493cb1a ""
   "fig/diagrama_cuerpolibre_solenoide.tex" 1775161138 763 6184e5951b423ccd9c86e56406fdab01 ""
   "instructivo.sty" 1775161410 9945 6e73d3f6dfa117e9424bf62a4f29314d ""
-  "tarea_1.tex" 1776801756 15632 4aacec4d6faba68662a0dc9a2f5d959f ""
+  "tarea_1.tex" 1776808487 19330 91799f02a0afd6b8ffdea38d5fdbf3dd ""
   (generated)
   "build/tarea_1.aux"
   "build/tarea_1.bcf"

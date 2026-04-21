@@ -21,7 +21,6 @@
 
 \usepackage{circuitikz}          % antes de babel
 \usepackage[spanish, es-noshorthands]{babel}
-\usepackage{amsmath}
 \usepackage{float}
 \usepackage{instructivo}
 \graphicspath{{./}{./fig/}}
@@ -107,21 +106,21 @@ eléctrico de este circuito \cite{Alexander2018}.
 \begin{equation}
 \begin{aligned}
     V_s &= i(t)R + L \frac{di}{dt} + i(t) \frac{dx}{dt} \frac{dL(x)}{dx} \\
-        &= iR + L \dot{i} + i \dot{x} \frac{dL(x)}{dx}
+        &= iR + L \dot{i} + i \dot{x} \frac{dL(x)}{dx} \\
+        &\approx iR + L \dot{i}
 \end{aligned}
 \label{eq:eléctrica_solenoide}
 \end{equation}
 
-Esta primera ecuación relaciona la tensión aplicada en la entrada, con la corriente que fluye 
-por el circuito. Si se observa, además de la aplicación de la ley de Ohm para el estado estacionario,
-se consideran las variaciones en el tiempo de la corriente, así como el último término que toma en cuenta 
-a la tensión "back-EMF" electromagnética, generada por el movimiento del émbolo.
+Esta ecuación \ref{eq:eléctrica_solenoide} relaciona la tensión de entrada con la corriente del circuito. Además de la caída de tensión resistiva 
+y la caída en el inductor ($L\frac{di}{dt}$), se incluye el término de fuerza contraelectromotriz (back-EMF) inducida 
+por el movimiento del émbolo. Para los fines de esta aplicación, donde la dinámica mecánica es significativamente más 
+lenta que la eléctrica o el desplazamiento es reducido, este último término se considera despreciable.
 
 \setlength{\parskip}{1em}
 
-Así entonces, en el estado estacionario en el que no existe movimiento del émbolo, la ecuación se reduce
-a únicamente el siguiente término. No obstante, para efectos del análisis dinámico del modelo y su linealización, 
-se van a considerar los tres términos completos.
+En el estado estacionario en el que no existe movimiento del émbolo, 
+la ecuación se reduce a únicamente el siguiente término. 
 
 \begin{equation}
     V_s = i(t)R
@@ -135,7 +134,7 @@ En donde además, se sabe que la resistencia depende del material propiamente, d
 \label{eq:resistencia_solenoide}
 \end{equation}
 
-Finalmente, la fuerza magnética generada por la bobina sobre el émbolo, se puede describir por medio
+Por su parte, la fuerza magnética generada por la bobina sobre el émbolo, se puede describir por medio
 de la siguiente ecuación \cite{sadiku2001electromagnetics}.
 
 \begin{equation}
@@ -202,6 +201,8 @@ que la carga ejerce sobre el pistón 2 queda entonces:
 donde $x_2$ y $\dot{x}_2$ son el desplazamiento y la velocidad del pistón 2, 
 respectivamente.
 
+\setlength{\parskip}{1em}
+
 Finalmente, se considera la contribución hidrostática debida a la diferencia 
 de altura $h$ entre ambos pistones, la cual se establece por la geometría de 
 la prensa y es, por tanto, constante:
@@ -239,18 +240,119 @@ se obtiene lo siguiente.
 \begin{equation}
 \begin{aligned}
         m \ddot{x} &= F_e - (F_d + F_r + F_l) \\
-                   &= \frac{i^2}{2} \frac{dL}{dx} - (b \dot{x} + k x + F_l)
+                   &= \frac{i^2}{2} \frac{dL}{dx} - (B \dot{x} + K x + F_l)
 \end{aligned}
-\label{eq:dinámica_solenoide}
+\label{eq:dinamica_solenoide}
 \end{equation}
 
-Como se puede observar en la ecuación \ref{eq:dinámica_solenoide}, la dinámica del sistema es no lineal, debido a la dependencia cuadrática 
+Como se puede observar en la ecuación \ref{eq:dinamica_solenoide}, la dinámica del sistema es no lineal, debido a la dependencia cuadrática 
 de la corriente, así como a la dependencia de la posición del émbolo en el término de la fuerza magnética. Lo anterior, hace necesario
-realizar una linealización para poder obtener un modelo de espacio de estados y función de transferencia, lo mismo ocurre para 
-la ecuación \ref{eq:eléctrica_solenoide} debido a su tercer término.
+realizar una linealización para poder obtener un modelo de espacio de estados y función de transferencia.
+
+\setlength{\parskip}{1em}
+
+Definiendo el punto de operación:
+
+\[
+\begin{aligned}
+    \dot{x} & = 0 \\
+    \ddot{x} & = 0 \\
+    x & = x_{0} \\
+    i & = i_{0} 
+\end{aligned}
+\]
+
+La ecuación de equilibrio tiene la forma:
+
+\begin{equation}
+\begin{aligned}
+        0 &= m \ddot{x} + B \dot{x} + Kx - \frac{i^2}{2} \frac{dL(x)}{dx} \\
+          &= Kx_{0} - \frac{i_{0}^2}{2} \frac{dL(x_{0})}{dx} \\
+          &= Kx_{0} - F_{e, 0}(x_{0}, i_{0})
+\end{aligned}
+\label{eq:equilibrio}
+\end{equation}
+
+La expansión en serie de Taylor para la no linealidad dentro de la ecuación dinámica,
+se aplica de la siguiente manera:
+
+\begin{equation}
+\begin{aligned}
+        F_{e}(x, i) - F_{e}(x_{0}, i_{0}) &= \frac{\partial F_{e}}{\partial x} \cdot \Delta x + \frac{\partial F_{e}}{\partial i} \cdot \Delta i \\
+        \Delta F_{e}                      &= \frac{\partial F_{e}}{\partial x} \cdot \Delta x + \frac{\partial F_{e}}{\partial i} \cdot \Delta i 
+\end{aligned}
+\label{eq:serieTaylor}
+\end{equation}
+
+Aplicando las derivadas parciales:
+
+\begin{equation}
+\begin{aligned}
+    \frac{\partial F_{e}}{\partial x}                      &= \frac{i^2}{2} \cdot \frac{d^2L(x)}{dx^2} \\
+    \left. \frac{\partial F_{e}}{\partial x} \right|_{0} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} = \frac{i_{0}^2}{2} \frac{2 \beta^2}{(\alpha + \beta x_{0})^3}
+\end{aligned}
+\label{eq:derivadaParcial_x}
+\end{equation}
+
+
+\begin{equation}
+\begin{aligned}
+    \frac{\partial F_{e}}{\partial i}                      &= i \cdot \frac{dL(x)}{dx} \\
+    \left. \frac{\partial F_{e}}{\partial i} \right|_{0} &= i_{0} \cdot \frac{dL(x_{0})}{dx} = i_{0} \frac{-\beta}{(\alpha + \beta x_{0})^2}
+\end{aligned}
+\label{eq:derivadaParcial_i}
+\end{equation}
+
+Dando como resultado: 
+
+\begin{equation}
+\begin{aligned}
+    \Delta F_{e} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} \cdot \Delta x + i_{0} \cdot \frac{dL(x_{0})}{dx} \cdot \Delta i \\
+    \Delta F_{e} &= a \cdot \Delta x + b \cdot \Delta i
+\end{aligned}
+\label{eq:resultado_serieTaylor}
+\end{equation}
+
+Al introducir la fuerza magnética linealizada dentro de la ecuación dinámica, se llega 
+a la siguiente ecuación resultante.
+
+\begin{equation}
+\begin{aligned}
+    m \Delta \ddot{x}   &= \Delta F_{e} -B\Delta \dot{x} - K\Delta x \\
+    m \Delta \ddot{x}   &= a\Delta x + b\Delta i - B\Delta \dot{x} - K\Delta x \\
+    m \Delta \ddot{x}   &= (a - K)\Delta x + b\Delta i - B\Delta \dot{x} \\
+    b \Delta i          &= m \Delta \ddot{x} + B\Delta \dot{x} + (K - a)\Delta x
+\end{aligned}
+\label{eq:dinamica_SolenoideResultante}
+\end{equation}
+
+Con el subsistema del solenoide linealizado y considerando la ecuación eléctrica \ref{eq:eléctrica_solenoide}, es posible 
+desarrollar el espacio de estados y la función de transferencia correspondientes. La entrada a 
+esta sección del sistema completo corresponde a una tensión de corriente directa (CD), mientras 
+que la salida es el desplazamiento horizontal del émbolo. Para este análisis, ambas ecuaciones 
+---la mecánica linealizada y la eléctrica--- coexisten simultáneamente como parte del modelo.
+
+
+
+
+
+
+
+
+
 
 \subsection{Sistema hidráulico}
 
+A diferencia del planteamiento inicial, el acople entre el subsistema del 
+solenoide y el subsistema hidráulico no se realiza a través de la fuerza 
+magnética $F_e$, sino a través del desplazamiento del émbolo $\Delta x$. 
+Esto es consistente con el modelo mecánico linealizado del solenoide 
+desarrollado previamente, en el cual parte de $F_e$ se consume acelerando la 
+masa del émbolo, venciendo la fricción viscosa y comprimiendo el resorte de 
+retorno; únicamente el movimiento resultante $\Delta x$ es transmitido al 
+fluido.
+
+\setlength{\parskip}{1em}
 
 Tomando el émbolo del solenoide como pistón 1, se tiene $\Delta x_1 = \Delta x$. 
 Aplicando la conservación de volumen \eqref{eq:conservacion_volumen}, el 
@@ -284,7 +386,7 @@ Por el principio de Pascal \eqref{eq:pascal}, la presión en el fluido
 Incorporando la presión hidrostática \eqref{eq:presion_hidrostatica}, la 
 presión total de salida vista por la carga es:
 \begin{equation}
-    {\,p_{out} = \frac{A_1}{A_2^{\,2}} 
+    \boxed{\,p_{out} = \frac{A_1}{A_2^{\,2}} 
         \left( K_c \, \Delta x + B_c \, \Delta \dot{x} \right) 
         + \rho \, g \, h \,}
 \label{eq:presion_salida}
@@ -307,6 +409,7 @@ presión (o fuerza) ejercida sobre la carga, manteniendo consistencia con las
 salidas del subsistema mecánico linealizado y facilitando la posterior 
 obtención del espacio de estados y la función de transferencia del sistema 
 completo.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
