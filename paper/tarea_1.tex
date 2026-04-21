@@ -21,6 +21,7 @@
 
 \usepackage{circuitikz}          % antes de babel
 \usepackage[spanish, es-noshorthands]{babel}
+\usepackage{amsmath}
 \usepackage{float}
 \usepackage{instructivo}
 \graphicspath{{./}{./fig/}}
@@ -106,21 +107,21 @@ eléctrico de este circuito \cite{Alexander2018}.
 \begin{equation}
 \begin{aligned}
     V_s &= i(t)R + L \frac{di}{dt} + i(t) \frac{dx}{dt} \frac{dL(x)}{dx} \\
-        &= iR + L \dot{i} + i \dot{x} \frac{dL(x)}{dx} \\
-        &\approx iR + L \dot{i}
+        &= iR + L \dot{i} + i \dot{x} \frac{dL(x)}{dx}
 \end{aligned}
 \label{eq:eléctrica_solenoide}
 \end{equation}
 
-Esta ecuación \ref{eq:eléctrica_solenoide} relaciona la tensión de entrada con la corriente del circuito. Además de la caída de tensión resistiva 
-y la caída en el inductor ($L\frac{di}{dt}$), se incluye el término de fuerza contraelectromotriz (back-EMF) inducida 
-por el movimiento del émbolo. Para los fines de esta aplicación, donde la dinámica mecánica es significativamente más 
-lenta que la eléctrica o el desplazamiento es reducido, este último término se considera despreciable.
+Esta primera ecuación relaciona la tensión aplicada en la entrada, con la corriente que fluye 
+por el circuito. Si se observa, además de la aplicación de la ley de Ohm para el estado estacionario,
+se consideran las variaciones en el tiempo de la corriente, así como el último término que toma en cuenta 
+a la tensión "back-EMF" electromagnética, generada por el movimiento del émbolo.
 
 \setlength{\parskip}{1em}
 
-En el estado estacionario en el que no existe movimiento del émbolo, 
-la ecuación se reduce a únicamente el siguiente término. 
+Así entonces, en el estado estacionario en el que no existe movimiento del émbolo, la ecuación se reduce
+a únicamente el siguiente término. No obstante, para efectos del análisis dinámico del modelo y su linealización, 
+se van a considerar los tres términos completos.
 
 \begin{equation}
     V_s = i(t)R
@@ -134,7 +135,7 @@ En donde además, se sabe que la resistencia depende del material propiamente, d
 \label{eq:resistencia_solenoide}
 \end{equation}
 
-Por su parte, la fuerza magnética generada por la bobina sobre el émbolo, se puede describir por medio
+Finalmente, la fuerza magnética generada por la bobina sobre el émbolo, se puede describir por medio
 de la siguiente ecuación \cite{sadiku2001electromagnetics}.
 
 \begin{equation}
@@ -153,24 +154,63 @@ de manera que la ecuación queda como.
 
 
 \subsection{Sistema hidráulico}
-Los sistemas hidráulicos se basan en el principio de Pascal, el cual establece que un cambio de presión aplicado a un
-fluido confinado se transmite a todas partes del fluido y a las paredes del recipiente que lo contiene \cite{PhysicsBook}. Su ecuación general es la siguiente:
+Los sistemas hidráulicos se basan en el principio de Pascal, el cual establece 
+que un cambio de presión aplicado a un fluido confinado se transmite sin 
+pérdidas a todo el fluido y a las paredes del recipiente que lo contiene 
+\cite{PhysicsBook}. Para un fluido incompresible en equilibrio, la presión 
+satisface:
 \begin{equation}
     p = \frac{F_1}{A_1} = \frac{F_2}{A_2}
+\label{eq:pascal}
 \end{equation}
-donde $p$ es la presión, $F_1$ y $F_2$ son las fuerzas aplicadas a los pistones 1 y 2 respectivamente, y $A_1$ y $A_2$ son las áreas de los pistones 1 y 2 respectivamente. Presión se define de la siguiente manera:
-\begin{equation}
-    p = \frac{dF}{dA}
-\end{equation}
-donde el diferencial de presión es perpendicular al diferencial de área.
+donde $F_1$ y $F_2$ son las fuerzas aplicadas sobre los pistones 1 y 2, de 
+áreas $A_1$ y $A_2$ respectivamente. Esta relación permite que una fuerza 
+modesta aplicada sobre el pistón de menor área se amplifique en el pistón de 
+mayor área, lo cual constituye el principio de funcionamiento de la prensa.
 
-El principio de Pascal permite que una pequeña fuerza aplicada a un pistón con un área pequeña pueda generar una fuerza mucho mayor en otro pistón con un área más grande, lo que es fundamental para el funcionamiento de la prensa hidráulica de precisión.
+\setlength{\parskip}{1em}
 
-Es importante también tener en cuenta que no todos los fluidos son iguales, por lo que se debe considerar la densidad del fluido a utilizar. Esto se establece a través de la siguiente ecuación:
+Adicionalmente, para un fluido incompresible, la conservación del volumen 
+desplazado acopla los movimientos de ambos pistones:
 \begin{equation}
-    p = \rho g h
+    A_1 \, \Delta x_1 = A_2 \, \Delta x_2
+\label{eq:conservacion_volumen}
 \end{equation}
-donde $\rho$ es la densidad del fluido, $g$ es la aceleración debido a la gravedad, y $h$ es la altura del fluido.
+de modo que el desplazamiento del pistón 2 queda determinado por el 
+desplazamiento del pistón 1, escalado por la razón de áreas.
+
+\setlength{\parskip}{1em}
+
+En esta aplicación, el émbolo del solenoide actúa como pistón 1 empujando el 
+fluido, mientras que el pistón 2 entra en contacto con la carga a prensar. 
+Puesto que la prensa está diseñada para actuar sobre un material físico 
+(por ejemplo, una pieza a comprimir o estampar), dicha carga presenta una 
+reacción mecánica ante el desplazamiento y la velocidad del pistón. Esta 
+reacción se modela de forma genérica mediante un comportamiento viscoelástico
+caracterizado por dos parámetros: la rigidez equivalente de la carga $K_c$, 
+que representa la resistencia elástica del material a ser deformado (con 
+unidades de N/m), y el coeficiente de amortiguamiento equivalente $B_c$, que 
+representa las pérdidas viscosas o disipativas asociadas a la deformación 
+(con unidades de N$\cdot$s/m). Ambos parámetros dependen del material 
+específico sobre el cual opere la prensa y se determinan empíricamente o a 
+partir de las propiedades mecánicas de dicho material. La fuerza de reacción 
+que la carga ejerce sobre el pistón 2 queda entonces:
+\begin{equation}
+    F_2 = K_c \, x_2 + B_c \, \dot{x}_2
+\label{eq:carga_hidraulica}
+\end{equation}
+donde $x_2$ y $\dot{x}_2$ son el desplazamiento y la velocidad del pistón 2, 
+respectivamente.
+
+Finalmente, se considera la contribución hidrostática debida a la diferencia 
+de altura $h$ entre ambos pistones, la cual se establece por la geometría de 
+la prensa y es, por tanto, constante:
+\begin{equation}
+    \Delta p_{h} = \rho \, g \, h
+\label{eq:presion_hidrostatica}
+\end{equation}
+donde $\rho$ es la densidad del fluido y $g$ la aceleración de la gravedad.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Análisis}
@@ -199,121 +239,74 @@ se obtiene lo siguiente.
 \begin{equation}
 \begin{aligned}
         m \ddot{x} &= F_e - (F_d + F_r + F_l) \\
-                   &= \frac{i^2}{2} \frac{dL}{dx} - (B \dot{x} + K x + F_l)
+                   &= \frac{i^2}{2} \frac{dL}{dx} - (b \dot{x} + k x + F_l)
 \end{aligned}
-\label{eq:dinamica_solenoide}
+\label{eq:dinámica_solenoide}
 \end{equation}
 
-Como se puede observar en la ecuación \ref{eq:dinamica_solenoide}, la dinámica del sistema es no lineal, debido a la dependencia cuadrática 
+Como se puede observar en la ecuación \ref{eq:dinámica_solenoide}, la dinámica del sistema es no lineal, debido a la dependencia cuadrática 
 de la corriente, así como a la dependencia de la posición del émbolo en el término de la fuerza magnética. Lo anterior, hace necesario
-realizar una linealización para poder obtener un modelo de espacio de estados y función de transferencia.
-
-\setlength{\parskip}{1em}
-
-Definiendo el punto de operación:
-
-\[
-\begin{aligned}
-    \dot{x} & = 0 \\
-    \ddot{x} & = 0 \\
-    x & = x_{0} \\
-    i & = i_{0} 
-\end{aligned}
-\]
-
-La ecuación de equilibrio tiene la forma:
-
-\begin{equation}
-\begin{aligned}
-        0 &= m \ddot{x} + B \dot{x} + Kx - \frac{i^2}{2} \frac{dL(x)}{dx} \\
-          &= Kx_{0} - \frac{i_{0}^2}{2} \frac{dL(x_{0})}{dx} \\
-          &= Kx_{0} - F_{e, 0}(x_{0}, i_{0})
-\end{aligned}
-\label{eq:equilibrio}
-\end{equation}
-
-La expansión en serie de Taylor para la no linealidad dentro de la ecuación dinámica,
-se aplica de la siguiente manera:
-
-\begin{equation}
-\begin{aligned}
-        F_{e}(x, i) - F_{e}(x_{0}, i_{0}) &= \frac{\partial F_{e}}{\partial x} \cdot \Delta x + \frac{\partial F_{e}}{\partial i} \cdot \Delta i \\
-        \Delta F_{e}                      &= \frac{\partial F_{e}}{\partial x} \cdot \Delta x + \frac{\partial F_{e}}{\partial i} \cdot \Delta i 
-\end{aligned}
-\label{eq:serieTaylor}
-\end{equation}
-
-Aplicando las derivadas parciales:
-
-\begin{equation}
-\begin{aligned}
-    \frac{\partial F_{e}}{\partial x}                      &= \frac{i^2}{2} \cdot \frac{d^2L(x)}{dx^2} \\
-    \left. \frac{\partial F_{e}}{\partial x} \right|_{0} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} = \frac{i_{0}^2}{2} \frac{2 \beta^2}{(\alpha + \beta x_{0})^3}
-\end{aligned}
-\label{eq:derivadaParcial_x}
-\end{equation}
-
-
-\begin{equation}
-\begin{aligned}
-    \frac{\partial F_{e}}{\partial i}                      &= i \cdot \frac{dL(x)}{dx} \\
-    \left. \frac{\partial F_{e}}{\partial i} \right|_{0} &= i_{0} \cdot \frac{dL(x_{0})}{dx} = i_{0} \frac{-\beta}{(\alpha + \beta x_{0})^2}
-\end{aligned}
-\label{eq:derivadaParcial_i}
-\end{equation}
-
-Dando como resultado: 
-
-\begin{equation}
-\begin{aligned}
-    \Delta F_{e} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} \cdot \Delta x + i_{0} \cdot \frac{dL(x_{0})}{dx} \cdot \Delta i \\
-    \Delta F_{e} &= a \cdot \Delta x + b \cdot \Delta i
-\end{aligned}
-\label{eq:resultado_serieTaylor}
-\end{equation}
-
-Al introducir la fuerza magnética linealizada dentro de la ecuación dinámica, se llega 
-a la siguiente ecuación resultante.
-
-\begin{equation}
-\begin{aligned}
-    m \Delta \ddot{x}   &= \Delta F_{e} -B\Delta \dot{x} - K\Delta x \\
-    m \Delta \ddot{x}   &= a\Delta x + b\Delta i - B\Delta \dot{x} - K\Delta x \\
-    m \Delta \ddot{x}   &= (a - K)\Delta x + b\Delta i - B\Delta \dot{x} \\
-    b \Delta i          &= m \Delta \ddot{x} + B\Delta \dot{x} + (K - a)\Delta x
-\end{aligned}
-\label{eq:dinamica_SolenoideResultante}
-\end{equation}
-
-Con el subsistema del solenoide linealizado y considerando la ecuación eléctrica \ref{eq:eléctrica_solenoide}, es posible 
-desarrollar el espacio de estados y la función de transferencia correspondientes. La entrada a 
-esta sección del sistema completo corresponde a una tensión de corriente directa (CD), mientras 
-que la salida es el desplazamiento horizontal del émbolo. Para este análisis, ambas ecuaciones 
----la mecánica linealizada y la eléctrica--- coexisten simultáneamente como parte del modelo.
-
-
-
-
-
-
-
-
-
+realizar una linealización para poder obtener un modelo de espacio de estados y función de transferencia, lo mismo ocurre para 
+la ecuación \ref{eq:eléctrica_solenoide} debido a su tercer término.
 
 \subsection{Sistema hidráulico}
 
-Para analizar el sistema hidráulico, se procede a definir dos fuerzas, la entrante (i.e., la salida del sistema del solenoide) y otra de salida (i.e., la fuerza de presión que se genera en el pistón 2). Para esto, se define la siguiente ecuación.
+
+Tomando el émbolo del solenoide como pistón 1, se tiene $\Delta x_1 = \Delta x$. 
+Aplicando la conservación de volumen \eqref{eq:conservacion_volumen}, el 
+desplazamiento del pistón 2 resulta:
 \begin{equation}
-    F_{out} = ( \frac{F_e}{A_1}-\rho g x ) A_2
+    \Delta x_2 = \frac{A_1}{A_2} \, \Delta x
+\label{eq:desplazamiento_pisto2}
+\end{equation}
+y derivando respecto al tiempo:
+\begin{equation}
+    \Delta \dot{x}_2 = \frac{A_1}{A_2} \, \Delta \dot{x}
+\label{eq:velocidad_piston2}
 \end{equation}
 
-Donde $F_e$ corresponde a la fuerza descrita en la sección anterior.
-
-Visto desde el punto de vista del usuario, de una prensa se espera escoger un valor de presión, por lo que la ecuación que define el valor buscado es la siguiente.
+La fuerza de reacción de la carga sobre el pistón 2, según 
+\eqref{eq:carga_hidraulica}, es entonces:
 \begin{equation}
-    p_{out} = \frac{F_{out}}{A_2} = \frac{F_e}{A_1}-\rho g x=\frac{i^2}{2} \frac{dL}{dx} \frac{1}{A_1}-\rho g x
+    F_2 = K_c \, \frac{A_1}{A_2} \, \Delta x 
+        + B_c \, \frac{A_1}{A_2} \, \Delta \dot{x}
+\label{eq:fuerza_piston2}
 \end{equation}
 
+Por el principio de Pascal \eqref{eq:pascal}, la presión en el fluido 
+(despreciando momentáneamente la contribución hidrostática) es:
+\begin{equation}
+    p = \frac{F_2}{A_2} = \frac{A_1}{A_2^{\,2}} 
+        \left( K_c \, \Delta x + B_c \, \Delta \dot{x} \right)
+\label{eq:presion_pascal}
+\end{equation}
+
+Incorporando la presión hidrostática \eqref{eq:presion_hidrostatica}, la 
+presión total de salida vista por la carga es:
+\begin{equation}
+    {\,p_{out} = \frac{A_1}{A_2^{\,2}} 
+        \left( K_c \, \Delta x + B_c \, \Delta \dot{x} \right) 
+        + \rho \, g \, h \,}
+\label{eq:presion_salida}
+\end{equation}
+
+\setlength{\parskip}{1em}
+
+De forma equivalente, la fuerza útil aplicada sobre la carga es:
+\begin{equation}
+    F_{out} = F_2 = \frac{A_1}{A_2} 
+        \left( K_c \, \Delta x + B_c \, \Delta \dot{x} \right)
+\label{eq:fuerza_salida}
+\end{equation}
+
+\setlength{\parskip}{1em}
+
+De esta manera, el subsistema hidráulico queda caracterizado por una relación 
+lineal entre el desplazamiento (y velocidad) del émbolo del solenoide y la 
+presión (o fuerza) ejercida sobre la carga, manteniendo consistencia con las 
+salidas del subsistema mecánico linealizado y facilitando la posterior 
+obtención del espacio de estados y la función de transferencia del sistema 
+completo.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -380,9 +373,3 @@ El texto relacionado al apéndice va aquí.
 \vfill
 
 \end{document}
-
-
-
-
-
-
