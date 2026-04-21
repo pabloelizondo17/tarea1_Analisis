@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/tarea_1"] 1776561900.07229 "build/tarea_1.bcf" "build/tarea_1.bbl" "build/tarea_1" 1776563496.44529 0
-  "build/tarea_1.bcf" 1776563495 108047 715eccb1f08d93963fa30a7fa27b8d40 "pdflatex"
+["biber build/tarea_1"] 1776728600.23945 "build/tarea_1.bcf" "build/tarea_1.bbl" "build/tarea_1" 1776730993.8174 0
+  "build/tarea_1.bcf" 1776730993 108047 715eccb1f08d93963fa30a7fa27b8d40 "pdflatex"
   "literatura.bib" 1775085593 909 f3774af18b7fd1d3ef1d874f51e9f4fa ""
   (generated)
   "build/tarea_1.bbl"
   "build/tarea_1.blg"
   (rewritten before read)
-["pdflatex"] 1776563491.5499 "c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/tarea_1.tex" "build/tarea_1.pdf" "tarea_1" 1776563496.4467 0
+["pdflatex"] 1776730990.53246 "c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/tarea_1.tex" "build/tarea_1.pdf" "tarea_1" 1776730993.8183 0
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775330152 84158 d77284a6843bde1e4b9764f09fb2e89e ""
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1773891445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1773891449 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -242,15 +242,15 @@
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090548324 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "build/tarea_1.aux" 1776563495 4766 43f53c4dd35fd3d621b159cd58104500 "pdflatex"
-  "build/tarea_1.bbl" 1776561902 5982 216bb4dad55215b6596881d38130dd2e "biber build/tarea_1"
-  "build/tarea_1.out" 1776563495 2803 d0132cdcadc3a48e25aaa1822db1fae7 "pdflatex"
-  "build/tarea_1.run.xml" 1776563495 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
-  "c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/tarea_1.tex" 1776563485 14423 d900dd7b6f0e20a14171b68414e2fd11 ""
+  "build/tarea_1.aux" 1776730993 4847 c5fe9bbbce100b8f32423283e62f759d "pdflatex"
+  "build/tarea_1.bbl" 1776728603 5982 216bb4dad55215b6596881d38130dd2e "biber build/tarea_1"
+  "build/tarea_1.out" 1776730993 2803 d0132cdcadc3a48e25aaa1822db1fae7 "pdflatex"
+  "build/tarea_1.run.xml" 1776730993 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
+  "c:/LaTex/tarea1_Analisis/tarea1_Analisis/paper/tarea_1.tex" 1776730985 15500 253ea776b6f55cc384bfc6a386701448 ""
   "fig/circuito_solenoide.tex" 1775086830 545 8f9144cd5d3941ffc25a01a7f493cb1a ""
   "fig/diagrama_cuerpolibre_solenoide.tex" 1775087356 763 6184e5951b423ccd9c86e56406fdab01 ""
   "instructivo.sty" 1776556734 9675 6e73d3f6dfa117e9424bf62a4f29314d ""
-  "tarea_1.tex" 1776563485 14423 d900dd7b6f0e20a14171b68414e2fd11 ""
+  "tarea_1.tex" 1776730985 15500 253ea776b6f55cc384bfc6a386701448 ""
   (generated)
   "build/tarea_1.aux"
   "build/tarea_1.bcf"

@@ -199,15 +199,14 @@ se obtiene lo siguiente.
 \begin{equation}
 \begin{aligned}
         m \ddot{x} &= F_e - (F_d + F_r + F_l) \\
-                   &= \frac{i^2}{2} \frac{dL}{dx} - (b \dot{x} + k x + F_l)
+                   &= \frac{i^2}{2} \frac{dL}{dx} - (B \dot{x} + K x + F_l)
 \end{aligned}
-\label{eq:dinámica_solenoide}
+\label{eq:dinamica_solenoide}
 \end{equation}
 
-Como se puede observar en la ecuación \ref{eq:dinámica_solenoide}, la dinámica del sistema es no lineal, debido a la dependencia cuadrática 
+Como se puede observar en la ecuación \ref{eq:dinamica_solenoide}, la dinámica del sistema es no lineal, debido a la dependencia cuadrática 
 de la corriente, así como a la dependencia de la posición del émbolo en el término de la fuerza magnética. Lo anterior, hace necesario
-realizar una linealización para poder obtener un modelo de espacio de estados y función de transferencia, lo mismo ocurre para 
-la ecuación \ref{eq:eléctrica_solenoide} debido a su tercer término.
+realizar una linealización para poder obtener un modelo de espacio de estados y función de transferencia.
 
 \setlength{\parskip}{1em}
 
@@ -226,9 +225,9 @@ La ecuación de equilibrio tiene la forma:
 
 \begin{equation}
 \begin{aligned}
-        0 &= m \ddot{x} + b \dot{x} + kx - \frac{i^2}{2} \frac{dL(x)}{dx} \\
-          &= kx_{0} - \frac{i_{0}^2}{2} \frac{dL(x_{0})}{dx} \\
-          &= kx_{0} - F_{e, 0}(x_{0}, i_{0})
+        0 &= m \ddot{x} + B \dot{x} + Kx - \frac{i^2}{2} \frac{dL(x)}{dx} \\
+          &= Kx_{0} - \frac{i_{0}^2}{2} \frac{dL(x_{0})}{dx} \\
+          &= Kx_{0} - F_{e, 0}(x_{0}, i_{0})
 \end{aligned}
 \label{eq:equilibrio}
 \end{equation}
@@ -249,7 +248,7 @@ Aplicando las derivadas parciales:
 \begin{equation}
 \begin{aligned}
     \frac{\partial F_{e}}{\partial x}                      &= \frac{i^2}{2} \cdot \frac{d^2L(x)}{dx^2} \\
-    \left. \frac{\partial F_{e}}{\partial x} \right|_{0} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} 
+    \left. \frac{\partial F_{e}}{\partial x} \right|_{0} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} = \frac{i_{0}^2}{2} \frac{2 \beta^2}{(\alpha + \beta x_{0})^3}
 \end{aligned}
 \label{eq:derivadaParcial_x}
 \end{equation}
@@ -258,7 +257,7 @@ Aplicando las derivadas parciales:
 \begin{equation}
 \begin{aligned}
     \frac{\partial F_{e}}{\partial i}                      &= i \cdot \frac{dL(x)}{dx} \\
-    \left. \frac{\partial F_{e}}{\partial i} \right|_{0} &= i_{0} \cdot \frac{dL(x_{0})}{dx}
+    \left. \frac{\partial F_{e}}{\partial i} \right|_{0} &= i_{0} \cdot \frac{dL(x_{0})}{dx} = i_{0} \frac{-\beta}{(\alpha + \beta x_{0})^2}
 \end{aligned}
 \label{eq:derivadaParcial_i}
 \end{equation}
@@ -272,6 +271,27 @@ Dando como resultado:
 \end{aligned}
 \label{eq:resultado_serieTaylor}
 \end{equation}
+
+Al introducir la fuerza magnética linealizada dentro de la ecuación dinámica, se llega 
+a la siguiente ecuación resultante.
+
+\begin{equation}
+\begin{aligned}
+    m \Delta \ddot{x}   &= \Delta F_{e} -B\Delta \dot{x} - K\Delta x \\
+    m \Delta \ddot{x}   &= a\Delta x + b\Delta i - B\Delta \dot{x} - K\Delta x \\
+    m \Delta \ddot{x}   &= (a - K)\Delta x + b\Delta i - B\Delta \dot{x} \\
+    b \Delta i          &= m \Delta \ddot{x} + B\Delta \dot{x} + (K - a)\Delta x
+\end{aligned}
+\label{eq:dinamica_SolenoideResultante}
+\end{equation}
+
+Con el subsistema del solenoide linealizado y considerando la ecuación eléctrica \ref{eq:eléctrica_solenoide}, es posible 
+desarrollar el espacio de estados y la función de transferencia correspondientes. La entrada a 
+esta sección del sistema completo corresponde a una tensión de corriente directa (CD), mientras 
+que la salida es el desplazamiento horizontal del émbolo. Para este análisis, ambas ecuaciones 
+---la mecánica linealizada y la eléctrica--- coexisten simultáneamente como parte del modelo.
+
+
 
 
 
