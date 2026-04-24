@@ -147,7 +147,7 @@ de la inductancia respecto a la posición del émbolo \cite{mathworks_solenoid}.
 de manera que la ecuación queda como.
 
 \begin{equation}
-    F_e = \frac{i^2}{2} \frac{-\beta}{(\alpha + \beta x)^2}
+    F_e = \frac{i^2}{2} \frac{\beta}{(\alpha + \beta x)^2}
 \label{eq:fuerza_magnetica_solenoide_reescrita}
 \end{equation}
 
@@ -289,7 +289,7 @@ Aplicando las derivadas parciales:
 \begin{equation}
 \begin{aligned}
     \frac{\partial F_{e}}{\partial x}                      &= \frac{i^2}{2} \cdot \frac{d^2L(x)}{dx^2} \\
-    \left. \frac{\partial F_{e}}{\partial x} \right|_{0} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} = \frac{i_{0}^2}{2} \frac{2 \beta^2}{(\alpha + \beta x_{0})^3}
+    \left. \frac{\partial F_{e}}{\partial x} \right|_{0} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} = \frac{i_{0}^2}{2} \frac{-2 \beta^2}{(\alpha + \beta x_{0})^3}
 \end{aligned}
 \label{eq:derivadaParcial_x}
 \end{equation}
@@ -298,7 +298,7 @@ Aplicando las derivadas parciales:
 \begin{equation}
 \begin{aligned}
     \frac{\partial F_{e}}{\partial i}                      &= i \cdot \frac{dL(x)}{dx} \\
-    \left. \frac{\partial F_{e}}{\partial i} \right|_{0} &= i_{0} \cdot \frac{dL(x_{0})}{dx} = i_{0} \frac{-\beta}{(\alpha + \beta x_{0})^2}
+    \left. \frac{\partial F_{e}}{\partial i} \right|_{0} &= i_{0} \cdot \frac{dL(x_{0})}{dx} = i_{0} \frac{\beta}{(\alpha + \beta x_{0})^2}
 \end{aligned}
 \label{eq:derivadaParcial_i}
 \end{equation}
@@ -307,7 +307,7 @@ Dando como resultado:
 
 \begin{equation}
 \begin{aligned}
-    \Delta F_{e} &= \frac{i_{0}^2}{2} \cdot \frac{d^2L(x_{0})}{dx^2} \cdot \Delta x + i_{0} \cdot \frac{dL(x_{0})}{dx} \cdot \Delta i \\
+    \Delta F_{e} &= \frac{i_{0}^2}{2} \frac{-2 \beta^2}{(\alpha + \beta x_{0})^3} \cdot \Delta x + i_{0} \frac{\beta}{(\alpha + \beta x_{0})^2} \cdot \Delta i \\
     \Delta F_{e} &= a \cdot \Delta x + b \cdot \Delta i
 \end{aligned}
 \label{eq:resultado_serieTaylor}
@@ -410,15 +410,61 @@ salidas del subsistema mecánico linealizado y facilitando la posterior
 obtención del espacio de estados y la función de transferencia del sistema 
 completo.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Desarrollo de la función de transferencia}
+
+\subsection{Circuito de control}
+
+\subsection{Solenoide}
+
+Partiendo de la ecuación dinámica linealizada del solenoide \ref{eq:dinamica_SolenoideResultante}, y 
+considerando la ecuación eléctrica \ref{eq:eléctrica_solenoide}, es posible obtener la función de transferencia 
+del subsistema del solenoide. Para esto, se procede a aplicar la transformada de Laplace a ambas ecuaciones, 
+asumiendo condiciones iniciales nulas.
+
+En el caso de la ecuación mecánica, se obtiene lo siguiente:
+\begin{equation}
+\begin{aligned}
+    m s^2 \Delta X + B s\Delta X + (K - a)\Delta X &= b \Delta I \\
+    (m s^2 + B s + (K - a)) \Delta X &= b \Delta I
+\end{aligned}
+\label{eq:laplace_mecanicaSolenoide}
+\end{equation}
+    
+Para la ecucación eléctrica, se obtiene:
+\begin{equation}
+\begin{aligned}
+    \Delta V_s &= (R + L s) \Delta I \\
+    \Delta I &= \frac{\Delta V_s}{R + L s}
+\end{aligned}
+\label{eq:laplace_electricaSolenoide}
+\end{equation}
+
+Sustituyendo la ecuación \ref{eq:laplace_electricaSolenoide} dentro de la ecuación \ref{eq:laplace_mecanicaSolenoide}, 
+se obtiene la función de transferencia del subsistema del solenoide, con entrada $\Delta V_s$ y salida $\Delta X$.
+
+\begin{equation}
+\begin{aligned}
+    \frac{\Delta X}{\Delta V_s} &= \frac{b}{(Ls + R)(m s^2 + B s + (K - a))} \\
+\end{aligned}
+\label{eq:funcionTransferencia_solenoide}
+\end{equation}
+
+
+
+
+
+\subsection{Sistema hidráulico}
+
+\subsection{Sistema completo}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Desarrollo del espacio de estados}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Desarrollo de la función de transferencia}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
