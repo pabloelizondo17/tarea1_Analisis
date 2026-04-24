@@ -82,27 +82,39 @@ Modelado, estados, Laplace, corriente, presión.
 
 \subsection{Circuito de control}
 
-El circuito de control tiene como objetivo regular la tensión promedio 
-aplicada al solenoide mediante una señal de modulación por ancho de 
-pulso (PWM). En este esquema, un interruptor 
-controlado (transistor MOSFET en saturación) conmuta la 
-tensión de alimentación $V_{cc}$ a una frecuencia fija $f_s$, de manera 
-que el valor promedio de la tensión en la carga queda determinado 
-únicamente por el ciclo de trabajo $D \in [0,1]$.
+La modulación por ancho de pulso (PWM) es una técnica de control electrónico
+mediante la cual se regula la potencia entregada a una carga variando el
+tiempo en que un interruptor controlado permanece cerrado durante cada
+período de conmutación. El parámetro que caracteriza esta proporción es
+el ciclo de trabajo $D \in [0,1]$, definido como la razón entre el tiempo
+de conducción $t_{on}$ y el período total $T_s = 1/f_s$:
+
+\begin{equation}
+    D = \frac{t_{on}}{T_s}
+    \label{eq:duty_cycle}
+\end{equation}
+
+En la implementación práctica, un transistor MOSFET opera en los
+extremos de su característica (saturación y corte), conmutando la
+tensión de alimentación $V_{cc}$ hacia la carga a frecuencia fija $f_s$ \cite{hart2011}.
+La tensión resultante en la carga es una señal pulsante de amplitud
+$V_{cc}$, cuyo valor promedio depende linealmente de $D$:
 
 \begin{equation}
     \bar{v}(t) = D \cdot V_{cc}
     \label{eq:pwm_avg}
 \end{equation}
 
-Dado que la bobina del solenoide actúa intrínsecamente como un filtro 
-paso bajo de primer orden, con una frecuencia de corte 
-$f_c = R/(2\pi L)$, la componente de rizo de alta frecuencia introducida 
-por la conmutación es atenuada de forma natural, siempre que se cumpla 
-la condición $f_s \gg f_c$. Bajo esta condición, la tensión efectiva 
-sobre el solenoide puede aproximarse con la expresión de la 
-ecuación~\eqref{eq:pwm_avg}, lo que permite tratar $D$ como una entrada 
-de control continua y lineal para efectos del modelado.
+Dado que la bobina del solenoide presenta una impedancia inductiva que
+actúa intrínsecamente como filtro paso bajo de primer orden, con
+frecuencia de corte $f_c = R/(2\pi L)$, la componente de rizado de alta
+frecuencia introducida por la conmutación es atenuada de forma natural
+siempre que se cumpla $f_s \gg f_c$. Bajo esta condición, la tensión
+efectiva aplicada al solenoide se aproxima al valor promedio de la
+ecuación~\eqref{eq:pwm_avg}, lo que permite tratar $D$ como una
+entrada de control continua y lineal en el modelo.
+
+
 
 
 \subsection{Solenoide}
@@ -242,6 +254,30 @@ donde $\rho$ es la densidad del fluido y $g$ la aceleración de la gravedad.
 \section{Análisis}
 
 \subsection{Circuito de control}
+
+El análisis del circuito de control consiste en determinar la relación
+entre la entrada de control $D$ y la tensión efectiva entregada al
+solenoide $V_{out}$. A partir de la definición del ciclo de trabajo y
+el principio de operación del PWM descrito en la sección~\ref{sec:desc_control},
+la tensión promedio en la carga es:
+
+\begin{equation}
+    V_{out}(t) = D \cdot V_{cc}
+\end{equation}
+
+Bajo el supuesto de filtrado ideal, esta relación es estrictamente
+proporcional y no introduce dinámica propia. Dado que $V_{cc}$ es una
+constante de operación, la ecuación dinámica de esta etapa es
+simplemente:
+
+\begin{equation}
+    V_{out}(t) = V_{cc} \cdot D(t)
+    \label{eq:control_dinamica}
+\end{equation}
+
+Esta expresión constituye la ecuación de entrada al subsistema del
+solenoide, y establece que la única variable de control del sistema
+completo es el ciclo de trabajo $D(t)$.
 
 \subsection{Solenoide}
 Para este sub-sistema, se procede a realizar el análisis de la ecuación mecánica en base al 

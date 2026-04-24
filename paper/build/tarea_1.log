@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  24 APR 2026 10:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.21)  24 APR 2026 16:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1127,10 +1127,10 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 32.
 (C:\Users\sergi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (c:\Users\sergi\Analisis y Control de Sistemas Lineales\tarea1_Analisis\paper\build\tarea_1.aux
-LaTeX Info: Redefining \. on input line 10.
-LaTeX Info: Redefining \% on input line 10.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 10.
+(babel)             Reported on input line 12.
 )
 \openout1 = `tarea_1.aux'.
 
@@ -1300,28 +1300,34 @@ File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
 ) (fig/circuito_solenoide.tex) [1{C:/Users/sergi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-] (fig/diagrama_cuerpolibre_solenoide.tex) [2]
+]
+
+LaTeX Warning: Reference `sec:desc_control' on page 2 undefined on input line 261.
+
+[2] (fig/diagrama_cuerpolibre_solenoide.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3] [4]
-Underfull \hbox (badness 1448) in paragraph at lines 551--553
+Underfull \hbox (badness 1448) in paragraph at lines 587--589
 \T1/phv/b/n/8 Juan P. Eli-zon-do \T1/phv/m/n/8 Reali-zó sus es-tu-dios de se-cun-da-ria en el
  []
 
 \tf@thm=\write6
 \openout6 = `tarea_1.thm'.
 
-[5
-
-] (c:\Users\sergi\Analisis y Control de Sistemas Lineales\tarea1_Analisis\paper\build\tarea_1.aux
-LaTeX Info: Redefining \sptext on input line 10.
-LaTeX Info: Redefining \. on input line 10.
-LaTeX Info: Redefining \% on input line 10.
+[5] (c:\Users\sergi\Analisis y Control de Sistemas Lineales\tarea1_Analisis\paper\build\tarea_1.aux
+LaTeX Info: Redefining \sptext on input line 12.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
 )
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `tarea_1.out' has not changed.
 (rerunfilecheck)             Checksum: 5BD38B206AA732DA177AA6714D05F4F9;3360.
 Package logreq Info: Writing requests to 'tarea_1.run.xml'.
@@ -1329,17 +1335,17 @@ Package logreq Info: Writing requests to 'tarea_1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56642 strings out of 467871
- 1334787 string characters out of 5418376
- 2385979 words of memory out of 5000000
- 84845 multiletter control sequences out of 15000+600000
- 759056 words of font info for 165 fonts, out of 8000000 for 9000
+ 56653 strings out of 467871
+ 1335030 string characters out of 5418376
+ 2387135 words of memory out of 5000000
+ 84851 multiletter control sequences out of 15000+600000
+ 760153 words of font info for 166 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 117i,11n,121p,1279b,2076s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,11n,121p,1279b,1809s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/sergi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "c:\Users\sergi\Analisis y Control de Sistemas Lineales\tarea1_Analisis\paper\build\tarea_1.pdf" (5 pages, 151896 bytes).
+Output written on "c:\Users\sergi\Analisis y Control de Sistemas Lineales\tarea1_Analisis\paper\build\tarea_1.pdf" (5 pages, 154775 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
+ 246 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
  189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

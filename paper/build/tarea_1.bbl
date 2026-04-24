@@ -19,6 +19,36 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{hart2011}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=bfa0ccb8483cd90aacd9d855fd3c7400}{%
+           family={Hart},
+           familyi={H\bibinitperiod},
+           given={Daniel\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
+      \strng{fullhash}{bfa0ccb8483cd90aacd9d855fd3c7400}
+      \strng{fullhashraw}{bfa0ccb8483cd90aacd9d855fd3c7400}
+      \strng{bibnamehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
+      \strng{authorbibnamehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
+      \strng{authornamehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
+      \strng{authorfullhash}{bfa0ccb8483cd90aacd9d855fd3c7400}
+      \strng{authorfullhashraw}{bfa0ccb8483cd90aacd9d855fd3c7400}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-07-338067-4}
+      \field{title}{Power Electronics}
+      \field{year}{2011}
+    \endentry
     \entry{Alexander2018}{book}{}{}
       \name{author}{2}{}{%
         {{hash=38f17d4baab84e2e893ad24888815193}{%
@@ -43,8 +73,8 @@
       \strng{authornamehash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
       \strng{authorfullhash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
       \strng{authorfullhashraw}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{6}
@@ -73,8 +103,8 @@
       \strng{authornamehash}{acd2910fdff85c25e324e4401e07500d}
       \strng{authorfullhash}{acd2910fdff85c25e324e4401e07500d}
       \strng{authorfullhashraw}{acd2910fdff85c25e324e4401e07500d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3rd}
@@ -95,8 +125,8 @@
       \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Accessed: 2026-04-01}
@@ -133,8 +163,8 @@
       \strng{authornamehash}{f41741dd065bae8cbcbaeee29424c299}
       \strng{authorfullhash}{f41741dd065bae8cbcbaeee29424c299}
       \strng{authorfullhashraw}{f41741dd065bae8cbcbaeee29424c299}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{13ra}

@@ -1,16 +1,16 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'build/tarea_1.blg'
-[201] biber-MSWIN64:342> INFO - === 
-[275] Biber.pm:421> INFO - Reading 'build/tarea_1.bcf'
-[728] Biber.pm:1002> INFO - Found 4 citekeys in bib section 0
-[780] Biber.pm:4487> INFO - Processing section 0
-[819] Biber.pm:4678> INFO - Looking for bibtex file 'literatura.bib' for section 0
-[986] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1009] bibtex.pm:1519> INFO - Found BibTeX data source 'literatura.bib'
-[1185] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1186] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1187] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[1221] bbl.pm:676> INFO - Writing 'build/tarea_1.bbl' with encoding 'UTF-8'
-[1225] bbl.pm:779> INFO - Output to build/tarea_1.bbl
-[1226] Biber.pm:132> WARN - legacy year field 'n.d.' in entry 'mathworks_solenoid' is not an integer - this will probably not sort properly.
-[1227] Biber.pm:134> INFO - WARNINGS: 1
+[385] biber-MSWIN64:342> INFO - === 
+[546] Biber.pm:421> INFO - Reading 'build/tarea_1.bcf'
+[684] Biber.pm:1002> INFO - Found 5 citekeys in bib section 0
+[714] Biber.pm:4487> INFO - Processing section 0
+[743] Biber.pm:4678> INFO - Looking for bibtex file 'literatura.bib' for section 0
+[846] bibtex.pm:1713> INFO - LaTeX decoding ...
+[872] bibtex.pm:1519> INFO - Found BibTeX data source 'literatura.bib'
+[1081] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1081] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1081] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[1134] bbl.pm:676> INFO - Writing 'build/tarea_1.bbl' with encoding 'UTF-8'
+[1138] bbl.pm:779> INFO - Output to build/tarea_1.bbl
+[1138] Biber.pm:132> WARN - legacy year field 'n.d.' in entry 'mathworks_solenoid' is not an integer - this will probably not sort properly.
+[1138] Biber.pm:134> INFO - WARNINGS: 1

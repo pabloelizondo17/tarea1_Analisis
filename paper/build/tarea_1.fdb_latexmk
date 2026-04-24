@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/tarea_1"] 1777047244.87878 "build/tarea_1.bcf" "build/tarea_1.bbl" "build/tarea_1" 1777049749.04486 0
-  "build/tarea_1.bcf" 1777049748 108047 715eccb1f08d93963fa30a7fa27b8d40 "pdflatex"
-  "literatura.bib" 1775751051 940 f3774af18b7fd1d3ef1d874f51e9f4fa ""
+["biber build/tarea_1"] 1777070742.08271 "build/tarea_1.bcf" "build/tarea_1.bbl" "build/tarea_1" 1777070761.26721 0
+  "build/tarea_1.bcf" 1777070760 108110 9cf536a28388eca7f81867ccbc7a73a5 "pdflatex"
+  "literatura.bib" 1777070611 1150 4d1d7cec5437358b923be1fd9063e5bf ""
   (generated)
   "build/tarea_1.bbl"
   "build/tarea_1.blg"
   (rewritten before read)
-["pdflatex"] 1777049745.21698 "c:/Users/sergi/Analisis y Control de Sistemas Lineales/tarea1_Analisis/paper/tarea_1.tex" "build/tarea_1.pdf" "tarea_1" 1777049749.04684 0
+["pdflatex"] 1777070758.71226 "c:/Users/sergi/Analisis y Control de Sistemas Lineales/tarea1_Analisis/paper/tarea_1.tex" "build/tarea_1.pdf" "tarea_1" 1777070761.2681 0
   "C:/Users/sergi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775751205 84158 d77284a6843bde1e4b9764f09fb2e89e ""
   "C:/Users/sergi/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1755397057 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/sergi/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1755397059 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -242,15 +242,15 @@
   "C:/Users/sergi/AppData/Local/Programs/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090548324 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/sergi/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/sergi/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "build/tarea_1.aux" 1777049748 6627 a6a5eb65fddffab887aa4460b5a4e2ea "pdflatex"
-  "build/tarea_1.bbl" 1777047249 5982 216bb4dad55215b6596881d38130dd2e "biber build/tarea_1"
-  "build/tarea_1.out" 1777049748 3360 5bd38b206aa732da177aa6714d05f4f9 "pdflatex"
-  "build/tarea_1.run.xml" 1777049748 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
-  "c:/Users/sergi/Analisis y Control de Sistemas Lineales/tarea1_Analisis/paper/tarea_1.tex" 1777049744 22732 a528eec569803e920069b3836209bbcc ""
+  "build/tarea_1.aux" 1777070760 6918 3ca207d5d5fc7c55ed263b94e07e8d70 "pdflatex"
+  "build/tarea_1.bbl" 1777070753 7194 8caeb9ea0ccd624e13a81b6d9b5f554a "biber build/tarea_1"
+  "build/tarea_1.out" 1777070760 3360 5bd38b206aa732da177aa6714d05f4f9 "pdflatex"
+  "build/tarea_1.run.xml" 1777070760 2434 e77a48f96b5d743efc1349ac8ef1aa49 "pdflatex"
+  "c:/Users/sergi/Analisis y Control de Sistemas Lineales/tarea1_Analisis/paper/tarea_1.tex" 1777070735 24093 e274380a7bf91e840060b523f0cc0024 ""
   "fig/circuito_solenoide.tex" 1775751051 545 8f9144cd5d3941ffc25a01a7f493cb1a ""
   "fig/diagrama_cuerpolibre_solenoide.tex" 1775751051 763 6184e5951b423ccd9c86e56406fdab01 ""
   "instructivo.sty" 1773959883 9945 6e73d3f6dfa117e9424bf62a4f29314d ""
-  "tarea_1.tex" 1777049744 22732 a528eec569803e920069b3836209bbcc ""
+  "tarea_1.tex" 1777070735 24093 e274380a7bf91e840060b523f0cc0024 ""
   (generated)
   "build/tarea_1.aux"
   "build/tarea_1.bcf"
