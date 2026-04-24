@@ -78,7 +78,32 @@ Modelado, estados, Laplace, corriente, presión.
 
 ...
 
+
+
 \subsection{Circuito de control}
+
+El circuito de control tiene como objetivo regular la tensión promedio 
+aplicada al solenoide mediante una señal de modulación por ancho de 
+pulso (PWM). En este esquema, un interruptor 
+controlado (transistor MOSFET en saturación) conmuta la 
+tensión de alimentación $V_{cc}$ a una frecuencia fija $f_s$, de manera 
+que el valor promedio de la tensión en la carga queda determinado 
+únicamente por el ciclo de trabajo $D \in [0,1]$.
+
+\begin{equation}
+    \bar{v}(t) = D \cdot V_{cc}
+    \label{eq:pwm_avg}
+\end{equation}
+
+Dado que la bobina del solenoide actúa intrínsecamente como un filtro 
+paso bajo de primer orden, con una frecuencia de corte 
+$f_c = R/(2\pi L)$, la componente de rizo de alta frecuencia introducida 
+por la conmutación es atenuada de forma natural, siempre que se cumpla 
+la condición $f_s \gg f_c$. Bajo esta condición, la tensión efectiva 
+sobre el solenoide puede aproximarse con la expresión de la 
+ecuación~\eqref{eq:pwm_avg}, lo que permite tratar $D$ como una entrada 
+de control continua y lineal para efectos del modelado.
+
 
 \subsection{Solenoide}
 Un solenoide es un dispositivo electromagnético que convierte la energía eléctrica en movimiento mecánico. Para lograrlo, 
@@ -415,6 +440,28 @@ completo.
 \section{Desarrollo de la función de transferencia}
 
 \subsection{Circuito de control}
+
+El circuito de control opera mediante modulación por ancho de pulso (PWM),
+de modo que la tensión promedio entregada al solenoide queda determinada
+únicamente por el ciclo de trabajo $D$, según la relación descrita en la
+ecuación~\eqref{eq:pwm_avg}. Aplicando la transformada de Laplace a dicha
+expresión, se obtiene:
+
+\begin{equation}
+    V_{out}(s) = V_{cc} \cdot D(s)
+    \label{eq:tf_control}
+\end{equation}
+
+La función de transferencia de esta etapa es por tanto una ganancia pura:
+
+\begin{equation}
+    G_{c}(s) = \frac{V_{out}(s)}{D(s)} = V_{cc}
+    \label{eq:gc}
+\end{equation}
+
+Esta etapa no introduce dinámica propia al sistema, ya que bajo el
+supuesto de filtrado ideal de la señal PWM, la salida sigue
+instantáneamente a la entrada escalada por $V_{cc}$.
 
 \subsection{Solenoide}
 
