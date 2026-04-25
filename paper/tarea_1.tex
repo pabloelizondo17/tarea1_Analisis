@@ -453,14 +453,6 @@ presión total de salida vista por la carga es:
 \label{eq:presion_salida}
 \end{equation}
 
-\setlength{\parskip}{1em}
-
-De forma equivalente, la fuerza útil aplicada sobre la carga es:
-\begin{equation}
-    F_{out} = F_2 = \frac{A_1}{A_2} 
-        \left( K_c \, \Delta x + B_c \, \Delta \dot{x} \right)
-\label{eq:fuerza_salida}
-\end{equation}
 
 \setlength{\parskip}{1em}
 
@@ -540,6 +532,16 @@ se obtiene la función de transferencia del subsistema del solenoide, con entrad
 
 \subsection{Sistema hidráulico}
 
+Para obtener la función de transferencia del sistema hidráulico, se toma al ecuación \ref{eq:presion_salida} y se aplica la transformada de Laplace, considerando $\Delta x$ como entrada y $p_{out}$ como salida. Para este caso, $\rho$$g$$h$ se considera una perturbación constante que no afecta la dinámica del sistema, por lo que se omite en el análisis de la función de transferencia.
+\begin{equation}
+\begin{aligned}
+    \frac{P_{out}(s)}{\Delta X(s)} &= \frac{A_1}{A_2^{\,2}} 
+        \left( K_c + B_c s \right)
+\end{aligned}
+\label{eq:laplace_hidraulico}
+\end{equation}
+
+
 \subsection{Sistema completo}
 
 
@@ -547,7 +549,170 @@ se obtiene la función de transferencia del subsistema del solenoide, con entrad
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Desarrollo del espacio de estados}
 
+A partir del modelo dinámico desarrollado en las secciones anteriores, se 
+construye una representación en espacio de estados del sistema completo. 
+Esta formulación permite caracterizar el comportamiento dinámico del 
+conjunto convertidor--solenoide--hidráulico en una única estructura 
+matricial, facilitando el posterior análisis y diseño de control.
 
+\setlength{\parskip}{1em}
+
+\subsection{Selección de variables de estado}
+
+Las variables de estado se eligen como aquellas que aparecen con derivadas 
+en las ecuaciones dinámicas del sistema. Del análisis del solenoide 
+(ecuaciones \ref{eq:eléctrica_solenoide} y \ref{eq:dinamica_SolenoideResultante}) 
+se identifican tres variables: el desplazamiento del émbolo, su velocidad y 
+la corriente que circula por la bobina. El subsistema del convertidor PWM 
+no aporta estados adicionales, ya que bajo el supuesto de filtrado ideal se 
+comporta como una ganancia pura $V_{cc}$ sin dinámica propia. De forma 
+análoga, el subsistema hidráulico tampoco aporta estados, pues bajo la 
+suposición de fluido incompresible su relación entrada-salida es algebraica.
+
+\setlength{\parskip}{1em}
+
+Se define entonces el vector de estados como:
+\begin{equation}
+    \mathbf{x} = 
+    \begin{bmatrix}
+        \Delta x \\
+        \Delta \dot{x} \\
+        \Delta i
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3
+    \end{bmatrix}
+\label{eq:vector_estados}
+\end{equation}
+
+la entrada del sistema como la variación del ciclo de trabajo:
+\begin{equation}
+    u = \Delta D
+\label{eq:entrada_sistema}
+\end{equation}
+
+y la salida como la variación de presión sobre la carga:
+\begin{equation}
+    y = \Delta p_{out}
+\label{eq:salida_sistema}
+\end{equation}
+
+\subsection{Ecuaciones de estado}
+
+Para obtener las ecuaciones de estado, se despejan las derivadas de mayor 
+orden de cada variable de estado a partir de las ecuaciones dinámicas 
+linealizadas.
+
+\setlength{\parskip}{1em}
+
+De la definición misma del estado $x_2$ se obtiene la primera ecuación 
+trivialmente:
+\begin{equation}
+    \dot{x}_1 = \Delta \dot{x} = x_2
+\label{eq:estado1}
+\end{equation}
+
+Despejando $\Delta \ddot{x}$ de la ecuación dinámica linealizada del 
+solenoide \eqref{eq:dinamica_SolenoideResultante}:
+\begin{equation}
+    \dot{x}_2 = \Delta \ddot{x} 
+              = \frac{a - K}{m}\,x_1 - \frac{B}{m}\,x_2 + \frac{b}{m}\,x_3
+\label{eq:estado2}
+\end{equation}
+
+Despejando $\Delta \dot{i}$ de la ecuación eléctrica del solenoide 
+\eqref{eq:eléctrica_solenoide}, considerando además que la entrada de 
+tensión proviene del convertidor PWM según $\Delta V_s = V_{cc}\,\Delta D$:
+\begin{equation}
+    \dot{x}_3 = \Delta \dot{i} 
+              = -\frac{R}{L}\,x_3 + \frac{V_{cc}}{L}\,u
+\label{eq:estado3}
+\end{equation}
+
+\subsection{Ecuación de salida}
+
+La salida del sistema corresponde a la variación de presión sobre la carga, 
+obtenida del análisis del subsistema hidráulico 
+\eqref{eq:presion_salida} omitiendo el término constante $\rho g h$, el cual 
+queda absorbido en el punto de operación al trabajar con desviaciones:
+\begin{equation}
+    y = \Delta p_{out} 
+      = \frac{A_1 K_c}{A_2^{\,2}}\,x_1 
+      + \frac{A_1 B_c}{A_2^{\,2}}\,x_2
+\label{eq:ecuacion_salida_estados}
+\end{equation}
+
+\subsection{Forma matricial}
+
+Agrupando las ecuaciones \eqref{eq:estado1}, \eqref{eq:estado2} y 
+\eqref{eq:estado3} en la forma estándar 
+$\dot{\mathbf{x}} = A\,\mathbf{x} + B\,u$, y la ecuación 
+\eqref{eq:ecuacion_salida_estados} en la forma 
+$y = C\,\mathbf{x} + D\,u$, se obtiene:
+\begin{equation}
+    \begin{bmatrix}
+        \dot{x}_1 \\[4pt]
+        \dot{x}_2 \\[4pt]
+        \dot{x}_3
+    \end{bmatrix}
+    =
+    \underbrace{
+    \begin{bmatrix}
+        0 & 1 & 0 \\[4pt]
+        \dfrac{a-K}{m} & -\dfrac{B}{m} & \dfrac{b}{m} \\[8pt]
+        0 & 0 & -\dfrac{R}{L}
+    \end{bmatrix}
+    }_{A}
+    \begin{bmatrix}
+        x_1 \\[4pt]
+        x_2 \\[4pt]
+        x_3
+    \end{bmatrix}
+    +
+    \underbrace{
+    \begin{bmatrix}
+        0 \\[4pt]
+        0 \\[4pt]
+        \dfrac{V_{cc}}{L}
+    \end{bmatrix}
+    }_{B}
+    u
+\label{eq:espacio_estados_dinamica}
+\end{equation}
+
+\begin{equation}
+    y = 
+    \underbrace{
+    \begin{bmatrix}
+        \dfrac{A_1 K_c}{A_2^{\,2}} & \dfrac{A_1 B_c}{A_2^{\,2}} & 0
+    \end{bmatrix}
+    }_{C}
+    \begin{bmatrix}
+        x_1 \\[4pt]
+        x_2 \\[4pt]
+        x_3
+    \end{bmatrix}
+    + 
+    \underbrace{\,0\,}_{D} \cdot u
+\label{eq:espacio_estados_salida}
+\end{equation}
+
+\setlength{\parskip}{1em}
+
+El sistema resultante es de orden 3, con una entrada (el ciclo de trabajo 
+$\Delta D$) y una salida (la variación de presión $\Delta p_{out}$), por lo 
+que se trata de un sistema SISO (Single Input, Single Output). La matriz $A$ 
+tiene una estructura particular en la que la dinámica eléctrica (tercera 
+fila) está desacoplada de la dinámica mecánica (primera y segunda filas), 
+salvo por el acople en sentido eléctrico-mecánico a través del término 
+$b/m$ que aparece en la segunda fila. Esto refleja físicamente que la 
+corriente induce movimiento en el émbolo, mientras que la fuerza 
+contraelectromotriz inducida por dicho movimiento ha sido despreciada en 
+el modelo, conforme a la simplificación adoptada en la ecuación 
+\eqref{eq:eléctrica_solenoide}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

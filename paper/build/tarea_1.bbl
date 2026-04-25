@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global/global}
-    \entry{hart2011}{book}{}{}
+  \datalist[entry]{none/global//global/global}
+    \entry{hart2011}{book}{}
       \name{author}{1}{}{%
         {{hash=bfa0ccb8483cd90aacd9d855fd3c7400}{%
            family={Hart},
@@ -35,12 +35,10 @@
       }
       \strng{namehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
       \strng{fullhash}{bfa0ccb8483cd90aacd9d855fd3c7400}
-      \strng{fullhashraw}{bfa0ccb8483cd90aacd9d855fd3c7400}
       \strng{bibnamehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
       \strng{authorbibnamehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
       \strng{authornamehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
       \strng{authorfullhash}{bfa0ccb8483cd90aacd9d855fd3c7400}
-      \strng{authorfullhashraw}{bfa0ccb8483cd90aacd9d855fd3c7400}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -49,7 +47,7 @@
       \field{title}{Power Electronics}
       \field{year}{2011}
     \endentry
-    \entry{Alexander2018}{book}{}{}
+    \entry{Alexander2018}{book}{}
       \name{author}{2}{}{%
         {{hash=38f17d4baab84e2e893ad24888815193}{%
            family={Alexander},
@@ -67,12 +65,10 @@
       }
       \strng{namehash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
       \strng{fullhash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
-      \strng{fullhashraw}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
       \strng{bibnamehash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
       \strng{authorbibnamehash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
       \strng{authornamehash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
       \strng{authorfullhash}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
-      \strng{authorfullhashraw}{b97a3bcc6d3ea40a2118e7ebcabd0af4}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -81,7 +77,7 @@
       \field{title}{Fundamentos de Circuitos Eléctricos}
       \field{year}{2018}
     \endentry
-    \entry{sadiku2001electromagnetics}{book}{}{}
+    \entry{sadiku2001electromagnetics}{book}{}
       \name{author}{1}{}{%
         {{hash=acd2910fdff85c25e324e4401e07500d}{%
            family={Sadiku},
@@ -97,12 +93,10 @@
       }
       \strng{namehash}{acd2910fdff85c25e324e4401e07500d}
       \strng{fullhash}{acd2910fdff85c25e324e4401e07500d}
-      \strng{fullhashraw}{acd2910fdff85c25e324e4401e07500d}
       \strng{bibnamehash}{acd2910fdff85c25e324e4401e07500d}
       \strng{authorbibnamehash}{acd2910fdff85c25e324e4401e07500d}
       \strng{authornamehash}{acd2910fdff85c25e324e4401e07500d}
       \strng{authorfullhash}{acd2910fdff85c25e324e4401e07500d}
-      \strng{authorfullhashraw}{acd2910fdff85c25e324e4401e07500d}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -111,7 +105,7 @@
       \field{title}{Elements of Electromagnetics}
       \field{year}{2001}
     \endentry
-    \entry{mathworks_solenoid}{online}{}{}
+    \entry{mathworks_solenoid}{online}{}
       \name{author}{1}{}{%
         {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
            family={{MathWorks}},
@@ -119,12 +113,10 @@
       }
       \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \strng{fullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
-      \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -139,7 +131,7 @@
       \verb https://la.mathworks.com/help/sps/ref/solenoid.html
       \endverb
     \endentry
-    \entry{PhysicsBook}{book}{}{}
+    \entry{PhysicsBook}{book}{}
       \name{author}{2}{}{%
         {{hash=cdcb55db9d535bec955f5911f1ac4e59}{%
            family={Young},
@@ -157,12 +149,10 @@
       }
       \strng{namehash}{f41741dd065bae8cbcbaeee29424c299}
       \strng{fullhash}{f41741dd065bae8cbcbaeee29424c299}
-      \strng{fullhashraw}{f41741dd065bae8cbcbaeee29424c299}
       \strng{bibnamehash}{f41741dd065bae8cbcbaeee29424c299}
       \strng{authorbibnamehash}{f41741dd065bae8cbcbaeee29424c299}
       \strng{authornamehash}{f41741dd065bae8cbcbaeee29424c299}
       \strng{authorfullhash}{f41741dd065bae8cbcbaeee29424c299}
-      \strng{authorfullhashraw}{f41741dd065bae8cbcbaeee29424c299}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
