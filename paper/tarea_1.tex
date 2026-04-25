@@ -20,6 +20,7 @@
 \documentclass[journal]{IEEEtran}
 
 \usepackage{circuitikz}          % antes de babel
+\usepackage{tikz}
 \usepackage[spanish, es-noshorthands]{babel}
 \usepackage{float}
 \usepackage{instructivo}
@@ -82,37 +83,75 @@ Modelado, estados, Laplace, corriente, presión.
 
 \subsection{Circuito de control}
 
-La modulación por ancho de pulso (PWM) es una técnica de control electrónico
-mediante la cual se regula la potencia entregada a una carga variando el
-tiempo en que un interruptor controlado permanece cerrado durante cada
-período de conmutación. El parámetro que caracteriza esta proporción es
-el ciclo de trabajo $D \in [0,1]$, definido como la razón entre el tiempo
-de conducción $t_{on}$ y el período total $T_s = 1/f_s$:
+El circuito de control corresponde a un convertidor reductor de tensión 
+(buck converter), cuyo objetivo es regular la tensión promedio entregada 
+al solenoide mediante la conmutación de un transistor MOSFET \cite{hart2011}. 
+El circuito está compuesto por un transistor que opera como interruptor, 
+un diodo de libre circulación, una bobina, un capacitor y la carga, que 
+en este caso corresponde a la impedancia del solenoide, tal como se 
+muestra en la figura~\ref{fig:buck}.
+
+\begin{figure}[h]
+\centering
+\begin{circuitikz}[scale=0.9, transform shape]
+
+    % Fuente Vs
+    \draw (0,0) to[V, v=\(V_s\), invert] (0,3);
+
+    % Riel inferior
+    \draw (0,0) -- (8,0);
+
+    % Switch (transistor MOSFET simplificado como llave)
+    \draw (0,3) -- (0.8,3);
+    \draw (0.8,3) to[nos] (2,3);  % nos = normally open switch
+
+    % Nodo izquierdo del diodo
+    \draw (2,3) -- (2.8,3);
+
+    % Diodo freewheeling (apunta hacia arriba = bloquea en conducción)
+    \draw (2.8,0) to[D, l=\(v_x\)] (2.8,3);
+
+    % Bobina L
+    \draw (2.8,3) to[L, l=\(v_L\), i=\(i_L\)] (5.5,3);
+
+    % Nodo central
+    \draw (5.5,3) -- (5.5,3);
+
+    % Capacitor C
+    \draw (5.5,3) to[C, i=\(i_C\)] (5.5,0);
+
+    % Resistencia de carga (solenoide)
+    \draw (5.5,3) -- (8,3);
+    \draw (8,3) to[R, l=\phantom{}, v=\(V_o\), i<=\(i_R\)] (8,0);
+
+    % Cerrar riel inferior
+    \draw (2.8,0) -- (0,0);
+
+\end{circuitikz}
+\caption{Circuito equivalente del convertidor buck \cite{hart2011}.}
+\label{fig:buck}
+\end{figure}
+
+Cuando el transistor se encuentra cerrado (conducción), la tensión de 
+alimentación $V_s$ se aplica directamente sobre la bobina y la carga. 
+Cuando el transistor se abre, la energía almacenada en la bobina se 
+descarga a través del diodo, manteniendo la continuidad de la corriente 
+en la carga \cite{hart2011}. El capacitor de salida actúa como un filtro 
+paso bajo, de modo que la componente de corriente alterna del rizado 
+se conduce a través de él, mientras que la componente de corriente 
+directa fluye por la carga. Bajo esta operación, la tensión promedio 
+de salida queda determinada únicamente por el ciclo de trabajo 
+$D \in [0,1]$, definido como:
 
 \begin{equation}
-    D = \frac{t_{on}}{T_s}
+    D = \frac{t_{on}}{T}
     \label{eq:duty_cycle}
 \end{equation}
 
-En la implementación práctica, un transistor MOSFET opera en los
-extremos de su característica (saturación y corte), conmutando la
-tensión de alimentación $V_{cc}$ hacia la carga a frecuencia fija $f_s$ \cite{hart2011}.
-La tensión resultante en la carga es una señal pulsante de amplitud
-$V_{cc}$, cuyo valor promedio depende linealmente de $D$:
+donde $t_{on}$ es el tiempo de conducción del transistor y $T$ es el 
+período de conmutación.
 
-\begin{equation}
-    \bar{v}(t) = D \cdot V_{cc}
-    \label{eq:pwm_avg}
-\end{equation}
 
-Dado que la bobina del solenoide presenta una impedancia inductiva que
-actúa intrínsecamente como filtro paso bajo de primer orden, con
-frecuencia de corte $f_c = R/(2\pi L)$, la componente de rizado de alta
-frecuencia introducida por la conmutación es atenuada de forma natural
-siempre que se cumpla $f_s \gg f_c$. Bajo esta condición, la tensión
-efectiva aplicada al solenoide se aproxima al valor promedio de la
-ecuación~\eqref{eq:pwm_avg}, lo que permite tratar $D$ como una
-entrada de control continua y lineal en el modelo.
 
 
 
@@ -255,29 +294,47 @@ donde $\rho$ es la densidad del fluido y $g$ la aceleración de la gravedad.
 
 \subsection{Circuito de control}
 
-El análisis del circuito de control consiste en determinar la relación
-entre la entrada de control $D$ y la tensión efectiva entregada al
-solenoide $V_{out}$. A partir de la definición del ciclo de trabajo y
-el principio de operación del PWM descrito en la sección~\ref{sec:desc_control},
-la tensión promedio en la carga es:
+El análisis del convertidor buck se realiza considerando los dos 
+intervalos de operación del transistor, siguiendo el procedimiento 
+descrito en \cite{hart2011}.
+
+\textbf{Transistor cerrado} ($0 \leq t \leq DT$): La tensión sobre 
+la bobina es $v_L = V_s - V_o$, por lo que la corriente en la bobina 
+crece linealmente:
 
 \begin{equation}
-    V_{out}(t) = D \cdot V_{cc}
+    \frac{di_L}{dt} = \frac{V_s - V_o}{L}
+    \label{eq:buck_on}
 \end{equation}
 
-Bajo el supuesto de filtrado ideal, esta relación es estrictamente
-proporcional y no introduce dinámica propia. Dado que $V_{cc}$ es una
-constante de operación, la ecuación dinámica de esta etapa es
-simplemente:
+\textbf{Transistor abierto} ($DT \leq t \leq T$): La bobina se 
+descarga a través del diodo y la tensión sobre ella es $v_L = -V_o$, 
+por lo que la corriente decrece linealmente:
 
 \begin{equation}
-    V_{out}(t) = V_{cc} \cdot D(t)
-    \label{eq:control_dinamica}
+    \frac{di_L}{dt} = \frac{-V_o}{L}
+    \label{eq:buck_off}
 \end{equation}
 
-Esta expresión constituye la ecuación de entrada al subsistema del
-solenoide, y establece que la única variable de control del sistema
-completo es el ciclo de trabajo $D(t)$.
+En estado estacionario, el cambio neto de corriente en la bobina 
+durante un período completo es cero. Aplicando esta condición de 
+balance de volt-segundos sobre la inductancia:
+
+\begin{equation}
+    (V_s - V_o)(DT) + (-V_o)(1-D)T = 0
+\end{equation}
+
+Despejando la tensión de salida, se obtiene la relación entrada-salida 
+del convertidor buck:
+
+\begin{equation}
+    V_o = D \cdot V_s
+    \label{eq:buck_vo}
+\end{equation}
+
+Esta expresión indica que la tensión promedio entregada al solenoide 
+es directamente proporcional al ciclo de trabajo $D$, que constituye 
+la única variable de control de esta etapa.
 
 \subsection{Solenoide}
 Para este sub-sistema, se procede a realizar el análisis de la ecuación mecánica en base al 
@@ -469,27 +526,19 @@ completo.
 
 \subsection{Circuito de control}
 
-El circuito de control opera mediante modulación por ancho de pulso (PWM),
-de modo que la tensión promedio entregada al solenoide queda determinada
-únicamente por el ciclo de trabajo $D$, según la relación descrita en la
-ecuación~\eqref{eq:pwm_avg}. Aplicando la transformada de Laplace a dicha
-expresión, se obtiene:
+A partir de la relación entrada-salida del convertidor buck obtenida 
+en la ecuación~\eqref{eq:buck_vo}, la función de transferencia de 
+esta etapa relaciona la tensión de salida $V_o$ con la tensión de 
+alimentación $V_s$, con el ciclo de trabajo $D$ como parámetro 
+de operación:
 
 \begin{equation}
-    V_{out}(s) = V_{cc} \cdot D(s)
-    \label{eq:tf_control}
-\end{equation}
-
-La función de transferencia de esta etapa es por tanto una ganancia pura:
-
-\begin{equation}
-    G_{c}(s) = \frac{V_{out}(s)}{D(s)} = V_{cc}
+    G_c(s) = \frac{V_o(s)}{V_s(s)} = D
     \label{eq:gc}
 \end{equation}
 
-Esta etapa no introduce dinámica propia al sistema, ya que bajo el
-supuesto de filtrado ideal de la señal PWM, la salida sigue
-instantáneamente a la entrada escalada por $V_{cc}$.
+Esta etapa se comporta como una ganancia pura igual al ciclo de 
+trabajo $D$, sin dinámica propia \cite{hart2011}.
 
 \subsection{Solenoide}
 
