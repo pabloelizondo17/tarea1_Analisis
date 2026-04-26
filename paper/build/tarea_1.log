@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  26 APR 2026 17:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  26 APR 2026 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1278,25 +1278,25 @@ Package biblatex Info: ... file 'tarea_1.bbl' found.
  (c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.bbl)
 Package biblatex Info: Reference section=0 on input line 33.
 Package biblatex Info: Reference segment=0 on input line 33.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 100.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 100.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 99.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 100.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+trsy on input line 99.
+LaTeX Font Info:    Trying to load font information for U+trsy on input line 100.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/trsym\utrsy.fd
 File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
 )
 \absvshift=\dimen369
 
-Overfull \hbox (5.02133pt too wide) in paragraph at lines 130--131
+Overfull \hbox (5.02133pt too wide) in paragraph at lines 131--132
  [][] 
  []
 
@@ -1310,7 +1310,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1117) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 10000) in alignment at lines 475--475
+Underfull \hbox (badness 10000) in alignment at lines 476--476
 [][] 
  []
 
@@ -1321,7 +1321,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4] [5] [6]
-Underfull \hbox (badness 1448) in paragraph at lines 877--879
+Underfull \hbox (badness 1448) in paragraph at lines 878--880
 \T1/phv/b/n/8 Juan P. Eli-zon-do \T1/phv/m/n/8 Reali-zó sus es-tu-dios de se-cun-da-ria en el
  []
 
@@ -1356,7 +1356,7 @@ Here is how much of TeX's memory you used:
  1144 hyphenation exceptions out of 8191
  117i,17n,121p,1199b,1805s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.pdf (7 pages, 207703 bytes).
+Output written on c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.pdf (7 pages, 208076 bytes).
 PDF statistics:
  331 PDF objects out of 1000 (max. 8388607)
  93 named destinations out of 1000 (max. 500000)
