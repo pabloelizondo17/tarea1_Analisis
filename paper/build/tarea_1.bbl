@@ -171,6 +171,41 @@
       \field{title}{University Physics with Modern Physics}
       \field{year}{2012}
     \endentry
+    \entry{geeplus_skf0420}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=7ae081e668431eb4825ddeeb7775652e}{%
+           family={{Geeplus Design Ltd.}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Beckenham, UK}%
+      }
+      \list{organization}{1}{%
+        {Geeplus}%
+      }
+      \strng{namehash}{7ae081e668431eb4825ddeeb7775652e}
+      \strng{fullhash}{7ae081e668431eb4825ddeeb7775652e}
+      \strng{fullhashraw}{7ae081e668431eb4825ddeeb7775652e}
+      \strng{bibnamehash}{7ae081e668431eb4825ddeeb7775652e}
+      \strng{authorbibnamehash}{7ae081e668431eb4825ddeeb7775652e}
+      \strng{authornamehash}{7ae081e668431eb4825ddeeb7775652e}
+      \strng{authorfullhash}{7ae081e668431eb4825ddeeb7775652e}
+      \strng{authorfullhashraw}{7ae081e668431eb4825ddeeb7775652e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{note}{Version 2024/02}
+      \field{title}{Open Frame Solenoid SK-F0420 Datasheet}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://geeplus.com/wp-content/uploads/2024/02/Open-Frame-Solenoid_SK-F0420.pdf
+      \endverb
+      \verb{url}
+      \verb https://geeplus.com/wp-content/uploads/2024/02/Open-Frame-Solenoid_SK-F0420.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
