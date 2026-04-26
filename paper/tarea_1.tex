@@ -277,6 +277,11 @@ que la carga ejerce sobre el pistón 2 queda entonces:
 donde $x_2$ y $\dot{x}_2$ son el desplazamiento y la velocidad del pistón 2, 
 respectivamente.
 
+El coeficiente $K_c$ representa la rigidez hidráulica equivalente del sistema, originada en la compresibilidad del aceite. Aplicando el modelo de fluido compresible con módulo bulk $\beta$ y volumen de cámara $V_0$, la rigidez vista desde el émbolo es $K_c = \beta A_2^2 / V_0$ \cite{merritt1967}. Adoptando $\beta = 1{,}5 \times 10^{9}$~Pa para aceite hidráulico mineral típico y $V_0 = 1$~mL para una cámara de prensa de precisión, se obtiene $K_c = 1{,}5 \times 10^{7}$~N/m.
+
+ 
+El coeficiente $B_c$ se selecciona mediante criterio de desempeño dinámico. Para una prensa de precisión, se busca un sistema sub-amortiguado con factor $\zeta = 0{,}7$, que provee la respuesta más rápida con sobrepaso mínimo \cite{ogata2010}. Aplicando $B_c = 2\zeta\sqrt{K_c \cdot m}$ con $m = 2 \times 10^{-3}$~kg, resulta $B_c \approx 242$~N$\cdot$s/m, que se redondea a $B_c = 250$~N$\cdot$s/m.
+
 \setlength{\parskip}{1em}
 
 Finalmente, se considera la contribución hidrostática debida a la diferencia 
@@ -845,7 +850,7 @@ el modelo, conforme a la simplificación adoptada en la ecuación
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusiones}
-Las conclusiones van aquí.
+El espacio de estados, la función de transferencia y el modelo simulado del sistema completo en Simscape se obtuvieron independientemente entre sí. De esta manera, se pudo comprobar distintas aproximaciones y evaluarlas. Los resultados se ajustaron a lo esperado, sin embargo
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
