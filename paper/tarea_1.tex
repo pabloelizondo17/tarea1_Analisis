@@ -612,7 +612,6 @@ completo.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Desarrollo de la función de transferencia}
 
 \subsection{Circuito de control}
 
@@ -683,6 +682,32 @@ Para obtener la función de transferencia del sistema hidráulico, se toma al ec
 \subsection{Sistema completo}
 
 
+
+\section{Desarrollo de la función de transferencia}
+
+La función de transferencia del sistema completo se obtiene multiplicando en 
+cascada las funciones de transferencia de los tres subsistemas, dado que no 
+existe retroalimentación entre ellos:
+
+\begin{equation}
+  G(s) = G_c(s)\cdot G_s(s)\cdot G_h(s)
+\end{equation}
+
+Sustituyendo las expresiones obtenidas en las ecuaciones~(IV.1), (IV.4) 
+y~(IV.5) y agrupando los términos constantes, la función de transferencia completa del 
+sistema queda:
+
+\begin{equation}\label{eq:FT_completa}
+  \frac{\Delta P_{out}(s)}{\Delta D(s)} = 
+  \frac{V_{cc}\, b\!\left(\dfrac{A_1}{A_2}\right)^{\!2}(K_c + B_c s)}
+       {(Ls + R)\!\left(ms^2 + Bs + (K-a)\right)}
+\end{equation}
+
+Se trata de un sistema de orden 3 con un cero en $s = -K_c/B_c$, introducido 
+por el subsistema hidráulico, y tres polos: uno real proveniente de la dinámica 
+eléctrica del solenoide en $s = -R/L$, y dos polos complejos conjugados 
+asociados a la dinámica mecánica, determinados por las raíces de 
+$ms^2 + Bs + (K-a) = 0$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Desarrollo del espacio de estados}

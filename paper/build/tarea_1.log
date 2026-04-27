@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  27 APR 2026 08:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  27 APR 2026 09:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1365,31 +1365,31 @@ Underfull \hbox (badness 10000) in alignment at lines 489--489
 Underfull \vbox (badness 5548) has occurred while \output is active []
 
  [4] [5] [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2073) has occurred while \output is active []
 
 
 Underfull \vbox (badness 3884) has occurred while \output is active []
 
  [7]
-<./fig/respuesta_SS.png, id=271, 360.036pt x 214.401pt>
+<./fig/respuesta_SS.png, id=277, 360.036pt x 214.401pt>
 File: ./fig/respuesta_SS.png Graphic file (type png)
 <use ./fig/respuesta_SS.png>
-Package pdftex.def Info: ./fig/respuesta_SS.png  used on input line 935.
+Package pdftex.def Info: ./fig/respuesta_SS.png  used on input line 961.
 (pdftex.def)             Requested size: 195.39433pt x 116.35713pt.
-<./fig/respuesta_TF.png, id=273, 361.35pt x 216.81pt>
+<./fig/respuesta_TF.png, id=279, 361.35pt x 216.81pt>
 File: ./fig/respuesta_TF.png Graphic file (type png)
 <use ./fig/respuesta_TF.png>
-Package pdftex.def Info: ./fig/respuesta_TF.png  used on input line 945.
+Package pdftex.def Info: ./fig/respuesta_TF.png  used on input line 971.
 (pdftex.def)             Requested size: 195.39433pt x 117.23775pt.
-<./fig/DesEmbolo.png, id=274, 360.912pt x 215.058pt>
+<./fig/DesEmbolo.png, id=280, 360.912pt x 215.058pt>
 File: ./fig/DesEmbolo.png Graphic file (type png)
 <use ./fig/DesEmbolo.png>
-Package pdftex.def Info: ./fig/DesEmbolo.png  used on input line 965.
+Package pdftex.def Info: ./fig/DesEmbolo.png  used on input line 991.
 (pdftex.def)             Requested size: 195.39433pt x 116.43147pt.
-<./fig/PressureSalidaSimscape.png, id=276, 360.255pt x 213.525pt>
+<./fig/PressureSalidaSimscape.png, id=282, 360.255pt x 213.525pt>
 File: ./fig/PressureSalidaSimscape.png Graphic file (type png)
 <use ./fig/PressureSalidaSimscape.png>
-Package pdftex.def Info: ./fig/PressureSalidaSimscape.png  used on input line 974.
+Package pdftex.def Info: ./fig/PressureSalidaSimscape.png  used on input line 1000.
 (pdftex.def)             Requested size: 195.39433pt x 115.81003pt.
 
 Underfull \vbox (badness 4556) has occurred while \output is active []
@@ -1412,23 +1412,23 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `tarea_1.out' has not changed.
-(rerunfilecheck)             Checksum: A8BE587B954573F6DF13CD62ACC0F19C;4780.
+(rerunfilecheck)             Checksum: B2E5E53B93184A187D51EFCF53C4D206;5048.
 Package logreq Info: Writing requests to 'tarea_1.run.xml'.
 \openout1 = `tarea_1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58264 strings out of 474486
- 1381231 string characters out of 5743755
- 2399714 words of memory out of 5000000
- 79771 multiletter control sequences out of 15000+600000
+ 58269 strings out of 474486
+ 1381293 string characters out of 5743755
+ 2399797 words of memory out of 5000000
+ 79773 multiletter control sequences out of 15000+600000
  698358 words of font info for 197 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  117i,17n,121p,1199b,1805s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.pdf (9 pages, 522383 bytes).
+Output written on c:\Users\matia\Downloads\tarea1_Analisis\paper\build\tarea_1.pdf (9 pages, 524644 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
