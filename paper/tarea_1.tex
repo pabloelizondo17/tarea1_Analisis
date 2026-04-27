@@ -72,30 +72,26 @@
 \maketitle
 
 
-\begin{abstract}
-El resumen no debe de exceder de 150 palabras y debe establecer lo que fue hecho, como fue hecho, los resultados principales y su significado. No cite referencias en el resumen. No coloque ecuaciones, símbolos especiales o palabras claves.
-\end{abstract}
-
-% Se sugiere no más de cuatro palabras o frases cortas en orden alfabético, separadas por comas, que representen su reporte
-\begin{IEEEkeywords}
-Modelado, estados, Laplace, corriente, presión.
-\end{IEEEkeywords}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introducción}
 
-\IEEEPARstart{E}{n} esta sección se describe una introducción que le permita al lector identificar aspectos importantes para la comprensión de la lectura del documento, una visión relacionada al experimento y a los conocimientos científicos estudiados.
-
+\IEEEPARstart{E}{n} el ámbito de la automatización industrial, el diseño de sistemas de accionamiento de alta precisión 
+requiere la integración de diversas áreas de la ingeniería electrónica y mecánica. El presente 
+informe detalla el modelado dinámico y análisis de una prensa hidráulica de precisión, cuyo funcionamiento 
+se fundamenta en la conversión de energía eléctrica en trabajo mecánico mediante el uso de un solenoide comercial.
+El sistema se divide en tres etapas críticas: una etapa de control basada en 
+un convertidor reductor (Buck) que regula la energía entregada al actuador, un subsistema electromecánico 
+donde el solenoide transforma la corriente eléctrica en una fuerza magnética capaz de desplazar un émbolo; finalmente, 
+un subsistema hidráulico que emplea el principio de Pascal para amplificar dicha fuerza y aplicarla 
+sobre una carga. Debido a las no linealidades intrínsecas del solenoide, como la dependencia 
+cuadrática de la corriente y la variabilidad de la inductancia respecto a la posición, se desarrolla un proceso 
+de linealización mediante series de Taylor alrededor de un punto de operación específico.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Descripción dinámica}
-
-...
-
-
 
 \subsection{Circuito de control}
 
@@ -856,7 +852,7 @@ el modelo, conforme a la simplificación adoptada en la ecuación
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Diagrama de bloques}
+\section{Diagrama funcional de bloques}
 
   
 \begin{tikzpicture}[auto, node distance=1.6cm]
@@ -922,8 +918,43 @@ del sistema.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Construcción del modelo simulado}
+\section{Análisis y Validación}
+Con los scripts desarrollados en MatLab y las simulaciones en Simulink tanto
+para la función de transferencia del sistema completo, como del modelo físico. Se obtuvieron
+los siguientes resultados.
 
+\subsection{Respuesta al escalón: SS, TF y Simscape}
+
+La siguiente figura muestra la respuesta al escalón por parte
+del espacio de estados.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{respuesta_SS.png}
+        \caption{Respuesta al escalón del SS}
+        \label{fig:SS_response}
+\end{figure}
+
+La respuesta de la función de transferencia, se representa 
+en la siguiente figura. 
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{respuesta_TF.png}
+        \caption{Respuesta al escalón de la TF}
+        \label{fig:TF_response}
+\end{figure}
+
+Como se observa en ambas gráficas las respuestas son prácticamente idénticas; con algunas diferencias mínimas, 
+tanto en su respuesta transitoria como en su estado estacionario. Su respuesta transitoria específicamente evidencia
+un comportamiento sub-amortiguado.
+
+Para esta respuestas hay que tener en consideración dos aspectos importante. Primero el hecho de que el sistema está 
+analizado en torno al punto de operación mencionado en las secciones anteriores; además, tal como se mencionó
+en el análisis dinámico del solenoide, se despreció la perturbación generada por la fuerza de reacción proveniente
+del sistema hidráulico.
+
+\subsection{Evaluación de escenarios alternativos}
 
 
 
@@ -934,9 +965,6 @@ El espacio de estados, la función de transferencia y el modelo simulado del sis
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendices
-\section{Pendiente}
-El texto relacionado al apéndice va aquí.
 
 
 \printbibliography
@@ -959,10 +987,7 @@ El texto relacionado al apéndice va aquí.
 \end{IEEEbiographynophoto}
 
 \begin{IEEEbiographynophoto}{Juan P. Elizondo}
-        Realizó sus estudios de secundaria en el SNCCCR, sede UNA Región Brunca, y actualmente cursa la carrera de Ingeniería Electrónica en el Instituto Tecnológico de Costa Rica (TEC). 
-        
-        Fue estudiante de la Universidad de Costa Rica (UCR) durante el año 2022 y participó en programas de estudio en matemática en la Universidad Nacional (UNA) durante los años 2020 y 2021. 
-        
+        Estudiante de Ingeniería Electrónica en el Tecnológico de Costa Rica (TEC).
         Cuenta con preparación y/o experiencia en áreas como:
         \begin{itemize}
             \item Arquitectura básica de redes, CISCO CCNA V7 (ITN), (2021).
