@@ -612,6 +612,7 @@ completo.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Desarrollo de la función de transferencia}
 
 \subsection{Circuito de control}
 
@@ -644,7 +645,7 @@ En el caso de la ecuación mecánica, se obtiene lo siguiente:
 \label{eq:laplace_mecanicaSolenoide}
 \end{equation}
     
-Para la ecucación eléctrica, se obtiene:
+Para la ecuación eléctrica, se obtiene:
 \begin{equation}
 \begin{aligned}
     \Delta V_s &= (R + L s) \Delta I \\
@@ -663,10 +664,6 @@ se obtiene la función de transferencia del subsistema del solenoide, con entrad
 \label{eq:funcionTransferencia_solenoide}
 \end{equation}
 
-
-
-
-
 \subsection{Sistema hidráulico}
 
 Para obtener la función de transferencia del sistema hidráulico, se toma al ecuación \ref{eq:presion_salida} y se aplica la transformada de Laplace, considerando $\Delta x$ como entrada y $p_{out}$ como salida. Para este caso, $\rho$$g$$h$ se considera una perturbación constante que no afecta la dinámica del sistema, por lo que se omite en el análisis de la función de transferencia.
@@ -680,10 +677,6 @@ Para obtener la función de transferencia del sistema hidráulico, se toma al ec
 
 
 \subsection{Sistema completo}
-
-
-
-\section{Desarrollo de la función de transferencia}
 
 La función de transferencia del sistema completo se obtiene multiplicando en 
 cascada las funciones de transferencia de los tres subsistemas, dado que no 
@@ -699,7 +692,7 @@ sistema queda:
 
 \begin{equation}\label{eq:FT_completa}
   \frac{\Delta P_{out}(s)}{\Delta D(s)} = 
-  \frac{V_{cc}\, b\!\left(\dfrac{A_1}{A_2}\right)^{\!2}(K_c + B_c s)}
+  \frac{V_{cc}\, b\!\left(\dfrac{A_1}{A_2^2}\right)(K_c + B_c s)}
        {(Ls + R)\!\left(ms^2 + Bs + (K-a)\right)}
 \end{equation}
 
@@ -726,7 +719,7 @@ Las variables de estado se eligen como aquellas que aparecen con derivadas
 en las ecuaciones dinámicas del sistema. Del análisis del solenoide 
 (ecuaciones \ref{eq:eléctrica_solenoide} y \ref{eq:dinamica_SolenoideResultante}) 
 se identifican tres variables: el desplazamiento del émbolo, su velocidad y 
-la corriente que circula por la bobina. El subsistema del convertidor PWM 
+la corriente que circula por la bobina. El subsistema del convertidor Buck 
 no aporta estados adicionales, ya que bajo el supuesto de filtrado ideal se 
 comporta como una ganancia pura $V_{cc}$ sin dinámica propia. De forma 
 análoga, el subsistema hidráulico tampoco aporta estados, pues bajo la 
@@ -788,7 +781,7 @@ solenoide \eqref{eq:dinamica_SolenoideResultante}:
 
 Despejando $\Delta \dot{i}$ de la ecuación eléctrica del solenoide 
 \eqref{eq:eléctrica_solenoide}, considerando además que la entrada de 
-tensión proviene del convertidor PWM según $\Delta V_s = V_{cc}\,\Delta D$:
+tensión proviene del convertidor Buck según $\Delta V_s = V_{cc}\,\Delta D$:
 \begin{equation}
     \dot{x}_3 = \Delta \dot{i} 
               = -\frac{R}{L}\,x_3 + \frac{V_{cc}}{L}\,u
@@ -933,7 +926,7 @@ el modelo, conforme a la simplificación adoptada en la ecuación
 El diagrama de bloques del sistema completo se construye concatenando los tres 
 subsistemas en cascada, tal como se ilustra en la figura. 
 La entrada del sistema es la variación del ciclo de trabajo $\Delta D$, la cual 
-es escalada por la ganancia del convertidor buck $V_{cc}$, produciendo la 
+es escalada por la ganancia del convertidor Buck $V_{cc}$, produciendo la 
 variación de tensión $\Delta V_s = V_{cc}\,\Delta D$ aplicada al solenoide. 
 El subsistema eléctrico del solenoide convierte dicha tensión en una variación 
 de corriente $\Delta i$, que a su vez genera una fuerza magnética linealizada 
@@ -950,7 +943,7 @@ Con los scripts desarrollados en MatLab y las simulaciones en Simulink tanto
 para la función de transferencia del sistema completo, como del modelo físico. Se obtuvieron
 los siguientes resultados.
 
-\subsection{Respuesta al escalón: SS, TF y Simscape}
+\subsection{Respuesta al escalón: SS y TF}
 
 La siguiente figura muestra la respuesta al escalón por parte
 del espacio de estados.
