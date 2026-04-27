@@ -605,17 +605,16 @@ completo.
 
 A partir de la relación entrada-salida del convertidor buck obtenida 
 en la ecuación~\eqref{eq:buck_vo}, la función de transferencia de 
-esta etapa relaciona la tensión de salida $V_o$ con la tensión de 
-alimentación $V_s$, con el ciclo de trabajo $D$ como parámetro 
-de operación:
+esta etapa relaciona la tensión de salida $V_o$  con el ciclo de trabajo $D$,
+con la tensión de alimentación $V_s$ como parámetro de operación:
 
 \begin{equation}
-    G_c(s) = \frac{V_o(s)}{V_s(s)} = D
+    G_c(s) = \frac{V_o(s)}{D(s)} = V_s
     \label{eq:gc}
 \end{equation}
 
 Esta etapa se comporta como una ganancia pura igual al ciclo de 
-trabajo $D$, sin dinámica propia \cite{hart2011}.
+trabajo $V_s$, sin dinámica propia \cite{hart2011}.
 
 \subsection{Solenoide}
 
