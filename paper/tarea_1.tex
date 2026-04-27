@@ -30,6 +30,21 @@
 
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+\usepackage{amsmath}
+\usetikzlibrary{shapes, arrows.meta, positioning, calc}
+ 
+% --- Estilos ---
+\tikzset{
+  block/.style={
+    draw, rectangle,
+    minimum width=3.2cm, minimum height=1.2cm,
+    align=center, font=\small
+  },
+  line/.style={draw, -{Latex[length=2.5mm, width=2mm]}},
+  siglabel/.style={font=\footnotesize, text=blue!65!black},
+  blklabel/.style={font=\footnotesize, right=0.15cm, text=black}
+}
+
 \begin{document}
 \setlength{\parindent}{4.2mm}
 %
@@ -839,6 +854,71 @@ contraelectromotriz inducida por dicho movimiento ha sido despreciada en
 el modelo, conforme a la simplificación adoptada en la ecuación 
 \eqref{eq:eléctrica_solenoide}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Diagrama de bloques}
+
+  
+\begin{tikzpicture}[auto, node distance=1.6cm]
+ 
+  % ── NODOS (de arriba hacia abajo) ───────────────────────────────────────
+ 
+  \node (input) {};
+ 
+  \node [block, below=1.0cm of input] (buck)
+    {$V_{cc}$};
+ 
+  \node [block, below=1.6cm of buck] (elec)
+    {$\dfrac{1}{Ls + R}$};
+ 
+  \node [block, below=1.6cm of elec] (gain)
+    {$b$};
+ 
+  \node [block, below=1.6cm of gain] (mech)
+    {$\dfrac{1}{ms^2 + Bs + (K - a)}$};
+ 
+  \node [block, below=1.6cm of mech] (hyd)
+    {$\dfrac{A_1}{A_2^{2}}(K_c + B_c s)$};
+ 
+  \node [below=1.0cm of hyd] (output) {};
+ 
+  % ── FLECHAS ─────────────────────────────────────────────────────────────
+ 
+  \draw[line] (input)  -- node[siglabel, right]{$\Delta D$}                     (buck);
+  \draw[line] (buck)   -- node[siglabel, right]{$\Delta V_s = V_{cc}\,\Delta D$} (elec);
+  \draw[line] (elec)   -- node[siglabel, right]{$\Delta i$}                      (gain);
+  \draw[line] (gain)   -- node[siglabel, right]{$b\,\Delta i$}                   (mech);
+  \draw[line] (mech)   -- node[siglabel, right]{$\Delta x$}                      (hyd);
+  \draw[line] (hyd)    -- node[siglabel, right]{$\Delta p_{out}$}                (output);
+ 
+  % ── ETIQUETAS DE BLOQUES (a la izquierda) ───────────────────────────────
+ 
+  \node[blklabel, left=0.15cm of buck]  {\textit{Convertidor Buck}};
+  \node[blklabel, left=0.15cm of elec]  {\textit{Solenoide (eléctrico)}};
+  \node[blklabel, left=0.15cm of gain]  {\textit{Ganancia } $b$};
+  \node[blklabel, left=0.15cm of mech]  {\textit{Solenoide (mecánico)}};
+  \node[blklabel, left=0.15cm of hyd]   {\textit{Sistema hidráulico}};
+ 
+  % ── ETIQUETA ENTRADA/SALIDA ─────────────────────────────────────────────
+  \node[siglabel, above=0.1cm of input]  {Entrada};
+  \node[siglabel, below=0.1cm of output] {Salida};
+ 
+\end{tikzpicture} 
+
+
+
+El diagrama de bloques del sistema completo se construye concatenando los tres 
+subsistemas en cascada, tal como se ilustra en la figura. 
+La entrada del sistema es la variación del ciclo de trabajo $\Delta D$, la cual 
+es escalada por la ganancia del convertidor buck $V_{cc}$, produciendo la 
+variación de tensión $\Delta V_s = V_{cc}\,\Delta D$ aplicada al solenoide. 
+El subsistema eléctrico del solenoide convierte dicha tensión en una variación 
+de corriente $\Delta i$, que a su vez genera una fuerza magnética linealizada 
+$b\,\Delta i$ sobre el émbolo. La dinámica mecánica del émbolo, descrita por 
+el segundo bloque del solenoide, transforma esa fuerza en un desplazamiento 
+$\Delta x$. Finalmente, el subsistema hidráulico convierte el desplazamiento 
+del émbolo en la presión de salida $\Delta p_{out}$, que constituye la salida 
+del sistema.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
