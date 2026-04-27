@@ -89,6 +89,8 @@ sobre una carga. Debido a las no linealidades intrínsecas del solenoide, como l
 cuadrática de la corriente y la variabilidad de la inductancia respecto a la posición, se desarrolla un proceso 
 de linealización mediante series de Taylor alrededor de un punto de operación específico.
 
+En este trabajo se plantea como objetivo el desarrollo de un modelo matemático y computacional de un sistema electromecánico, en el cual se represente adecuadamente la interacción entre al menos dos dominios físicos relevantes. Asimismo, se busca implementar dicho modelo utilizando herramientas de simulación apropiadas, garantizando la validez de las suposiciones realizadas y las condiciones de operación del sistema. Finalmente, se pretende analizar el comportamiento dinámico del sistema bajo distintas condiciones de funcionamiento, con el fin de comprender su respuesta y desempeño.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Descripción dinámica}
@@ -954,14 +956,41 @@ analizado en torno al punto de operación mencionado en las secciones anteriores
 en el análisis dinámico del solenoide, se despreció la perturbación generada por la fuerza de reacción proveniente
 del sistema hidráulico.
 
+\subsection{Análisis completo}
+
+En Simscape, al modelarse el sistema completo con una entrada escalón de 7.33~V, es decir, el escenario alrededor del punto de operación, se obtuvo una respuesta transitoria de alrededor de 1.4~MPa, alejándose de lo predicho por el espacio de estados y la función de transferencia, donde se esperaba tener 3.9~MPa. Esta diferencia puede ser explicada debido a que el análisis teórico asumió que el émbolo empujado por el solenoide iba a tener una dinámica ideal como fuente de velocidad, es decir, no iba a verse afectado por fuerzas de reacción. Según el modelo de Simscape, las fuerzas de reacción si afectaron el funcionamiento del sistema completo. Este se evidencia ya que al simular un émbolo perfecto se obtiene una presión igual a la esperada, y esto se logra a partir de un desplazamiento de 3~mm.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{DesEmbolo.png}
+        \caption{Desplazamiento del émbolo en Simscape (desplazamiento con respecto al tiempo)}
+        \label{fig:embolo_simscape}
+\end{figure}
+
+La figura \ref{fig:embolo_simscape} muestra el desplazamiento del émbolo en Simscape, evidenciando que el desplazamiento máximo es de alrededor de 1.1~mm, lo cual es menor al desplazamiento de alrededor de3~mm calculado. Se muestran oscilaciones, i.e., el movimiento del émbolo no es ideal.
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{PressureSalidaSimscape.png}
+        \caption{Respuesta al escalón del sistema completo en Simscape (presión con respecto al tiempo)}
+        \label{fig:salida_simscape}
+\end{figure}
+
+
 \subsection{Evaluación de escenarios alternativos}
 
+Se simularon dos escenarios alternativos. El primero fue uno con una entrada de 1.46~V, respondiendo a un ciclo de trabajo de 0.1. Este valor debería dar una presión mucho menor en la salida que la esperada alrededor del punto de operación. Según la simulación en Simscape, se obtuvo una presión final en estado estacionario de 542~kPa, mientras que el la función de transferencia y el estado de espacios calcularon una presión en estado estacionario de 792~kPa. Viendo el movimiento del émbolo, se presenta de nuevo el efecto de las fuerzas de reacción contra el émbolo.
+El segundo escenario asumió un voltaje de entrada de 14.66~V, es decir, un ciclo de trabajo de 1. La simulación de Simscape mostró un valor de presión final en estado estacionario de 3.8~MPa, bastante distinto al esperado ideal según el espacio de estados y la función de transferencia, que calcularon un valor de 7.9~MPa. A pesar de esa diferencia, el desplazamiento del émbolo fue de aproximadamente 3~mm, es decir, se obutvo la presión esperada con una entrada de 3~mm. La discrepancia viene de la relación con la tensión. En este escenario así como el primer escenario alternativo, es importante mencionar que están fuera del rango de operación calculado según la linealización.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusiones}
-El espacio de estados, la función de transferencia y el modelo simulado del sistema completo en Simscape se obtuvieron independientemente entre sí. De esta manera, se pudo comprobar distintas aproximaciones y evaluarlas. Los resultados se ajustaron a lo esperado, sin embargo
+El espacio de estados y la función de transferencia obtenidos de manera independiente entre sí mostraron los mismos resultados. Sin embargo, el modelo en Simscape del sistema completo (control, solenoide  e hidráulico) demostró efectos que no fueron considerados en el análisis teórico. Específicamente, se asumió que el émbolo empujado por el solenoide era perfecto, es decir, iba a lograr el desplazamiento calculado sin verse afectado por fuerzas de reacción. Las simulaciones en Simscape demostraron que la dinámica de fluidos en el escenario de 7.33~V empujaron el émbolo.
+Simulando para otros escenarios no cubiertos por las suposiciones de linealización, se obtuvieron valores inconsistentes entre la simulación de Simscape y el espacio de estados y la función de transferencia, lo cual se explica por el mismo efecto de fuerzas de reacción contra el émbolo y el rango no esperado de valores de tensión.
+
+Se logró formular un modelo matemático y computacional de un sistema electromecánico e hidráulico, así como implementar el modelo con herramientas de
+simulación apropiadas, de tal manera que se comprobaron suposiciones y se evidenciaron limitaciones por la linealización así como por efectos no ideales que el modelo teórico no asumió. Finalmente, se analizó distintos escenarios bajo diferentes condiciones de operación.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -972,12 +1001,6 @@ El espacio de estados, la función de transferencia y el modelo simulado del sis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Biografías de los autores}
-
-\begin{IEEEbiographynophoto}{Sergio Salazar}
-        Estudiante del Instituto Tecnológico de Costa Rica (TEC) en la carrera de ingeniería electrónica.\\
-        Tutor de Matemática General\\
-        Correo: sersalazar@estudiantec.cr
-\end{IEEEbiographynophoto}
 
  
 \begin{IEEEbiographynophoto}{Matías A. Camacho}
@@ -999,6 +1022,11 @@ El espacio de estados, la función de transferencia y el modelo simulado del sis
         Correo: juelizondo@estudiantec.cr
 \end{IEEEbiographynophoto}
 
+\begin{IEEEbiographynophoto}{Sergio Salazar}
+        Estudiante del Instituto Tecnológico de Costa Rica (TEC) en la carrera de ingeniería electrónica.\\
+        Tutor de Matemática General\\
+        Correo: sersalazar@estudiantec.cr
+\end{IEEEbiographynophoto}
 
 
 \vfill
